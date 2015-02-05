@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-adminlogin': {
           templateUrl: 'templates/tab-adminlogin.html',
-          controller: 'ChatsCtrl'
+          controller: 'AdminLoginCtrl'
         }
       }
     })
