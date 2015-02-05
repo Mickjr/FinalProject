@@ -1,10 +1,28 @@
-<ion-view view-title="Friends">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-avatar" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        <img ng-src="{{friend.face}}">
-        <h2>{{friend.name}}</h2>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+<ion-view title="Welcome to AirChat">
+  <div class="bar bar-header bar-light">
+    <div class="title" id="logo">
+      <img src="img/logo.png" />
+    </div>
+  </div>
+  
+  <ion-content class="padding">
+
+    <h4>Register for an account</h4>
+
+    <label class="item item-input item-stacked-label item-divider">   
+      <input type="username" placeholder="Enter a username">
+    </label>
+
+    <label class="item item-input item-stacked-label item-divider">   
+      <input type="email" placeholder="Enter your email">
+    </label>
+
+    <label class="item item-input item-stacked-label item-divider">       
+      <input type="password" placeholder="Enter your password">
+    </label>
+
+    <button class="button button-block button-assertive">
+      Login
+    </button>
+      
+</ion-header-bar>
