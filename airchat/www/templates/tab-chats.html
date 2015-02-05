@@ -1,16 +1,22 @@
-<ion-view view-title="Chats">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+<ion-view title="Welcome to AirChat">
+  <div class="bar bar-header bar-light">
+    <div class="title" id="logo">
+      <img src="img/logo.png" />
+    </div>
+  </div>
+  <ion-content class="padding">
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+    <label class="item item-input item-stacked-label item-divider">   
+      <input type="email" placeholder="Enter your email">
+    </label>
+
+    <label class="item item-input item-stacked-label item-divider">       
+      <input type="password" placeholder="Enter your password">
+    </label>
+
+    <button class="button button-block button-assertive">
+      Login
+    </button>
+
+      
+</ion-header-bar>

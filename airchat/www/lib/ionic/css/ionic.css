@@ -3722,7 +3722,7 @@ ion-tabs.tabs-color-active-stable .tab-item {
 ion-tabs.tabs-color-active-positive .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
-    color: #387ef5; }
+    color: #ef473a; }
 ion-tabs.tabs-color-active-calm .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-calm .tab-item.tab-item-active, ion-tabs.tabs-color-active-calm .tab-item.active, ion-tabs.tabs-color-active-calm .tab-item.activated {
@@ -3730,7 +3730,8 @@ ion-tabs.tabs-color-active-calm .tab-item {
 ion-tabs.tabs-color-active-assertive .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-assertive .tab-item.tab-item-active, ion-tabs.tabs-color-active-assertive .tab-item.active, ion-tabs.tabs-color-active-assertive .tab-item.activated {
-    color: #ef473a; }
+    color: #ef473a;
+     }
 ion-tabs.tabs-color-active-balanced .tab-item {
   color: #444; }
   ion-tabs.tabs-color-active-balanced .tab-item.tab-item-active, ion-tabs.tabs-color-active-balanced .tab-item.active, ion-tabs.tabs-color-active-balanced .tab-item.activated {
@@ -6286,16 +6287,22 @@ progress {
     .button-outline.button-outline.active, .button-outline.button-outline.activated {
       background-color: #b2b2b2;
       box-shadow: none;
-      color: #fff; }
+      color: #fff; 
+  }
 
 .padding > .button.button-block:first-child {
   margin-top: 0; }
 
 .button-block {
   display: block;
-  clear: both; }
+  clear: both;
+  -webkit-box-shadow: 5px 2.5px 2.5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 2.5px 2.5px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 2.5px 2.5px 0px rgba(0,0,0,0.75); 
+	}
   .button-block:after {
-    clear: both; }
+    clear: both; 
+	}
 
 .button-full, .button-full > .button {
   display: block;
