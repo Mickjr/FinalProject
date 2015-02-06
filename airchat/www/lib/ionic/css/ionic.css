@@ -2229,7 +2229,9 @@ body.grade-b, body.grade-c {
   margin-top: -1px;
   padding-top: 1px;
   width: auto;
-  height: auto; }
+  height: auto;
+  background: url(image)
+   }
 
 .scroll-content-false, .menu .scroll-content.scroll-content-false {
   z-index: 11; }
