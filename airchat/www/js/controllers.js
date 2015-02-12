@@ -13,7 +13,7 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('RegisterCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
 })
 
