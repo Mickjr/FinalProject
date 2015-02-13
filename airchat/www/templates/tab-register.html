@@ -9,20 +9,20 @@
 
     <h4>Register for an account!</h4>
 
-    <label class="item item-input item-stacked-label item-divider">   
+   <!--  <label class="item item-input item-stacked-label item-divider">   
       <input type="username" placeholder="Enter a username">
-    </label>
+    </label> -->
 
     <label class="item item-input item-stacked-label item-divider">   
-      <input type="email" placeholder="Enter your email">
+      <input type="email" placeholder="Enter your email" ng-model="registerUser.email">
     </label>
 
     <label class="item item-input item-stacked-label item-divider">       
-      <input type="password" placeholder="Enter your password">
+      <input type="password" placeholder="Enter your password" ng-model="registerUser.password">
     </label>
 
-    <button class="button button-block button-assertive">
-      Login
+    <button ng-click="register()" class="button button-block button-assertive">
+      Register
     </button>
       
 </ion-header-bar>

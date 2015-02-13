@@ -10,14 +10,14 @@
     <h4>Admin Please Login!</h4>
 
     <label class="item item-input item-stacked-label item-divider">   
-      <input type="email" placeholder="Enter your email">
+      <input type="email" placeholder="Enter your email" ng-model="adminUser.email">
     </label>
 
     <label class="item item-input item-stacked-label item-divider">       
-      <input type="password" placeholder="Enter your password">
+      <input type="password" placeholder="Enter your password" ng-model="adminUser.password">
     </label>
 
-    <button class="button button-block button-assertive">
+    <button ng-click="adminlogin()" class="button button-block button-assertive">
       Login
     </button>
       
