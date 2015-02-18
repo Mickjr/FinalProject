@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<meta charset="UTF-8" />
+	<title>AirChat!</title>
+	
+	
+	<!-- jQuery -->
+	
+	<!-- Angular -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	
+	<!-- AngularRoute -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+	
+	
+	<!-- FireBase -->
+	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+	
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.js"></script>
+	<script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+	<!-- Angualar Bootstrap -->
+		<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers/detailctrl.js"></script>
+		<script type="text/javascript" src="js/controllers/homectrl.js"></script>
+		<script type="text/javascript" src="js/controllers/searchctrl.js"></script>
+
+
+	<!-- Font -->
+	<link href='http://fonts.googleapis.com/css?family=Cuprum:400,400italic' rel='stylesheet' type='text/css'>
+	
+	<!-- CSS -->
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/nivo-lightbox.css" rel="stylesheet" />
+	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+	<link href="css/flexslider.css" rel="stylesheet" />
+	<link href="css/animate.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+<header class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs" href="index.html">
+                   <img height="50px" src="img/logo.png" alt="" /> 
+                </a>
+            </div>
+            <nav class="hidden-xs">
+                <ul class="nav navbar-nav">
+                    <a href="index.html" role="button" class="navbar-brand">
+                      <img height="70px" src="img/logo.png" alt="" /> 
+                   </a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                		<img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/>
+                	</li>	
+                	<li>
+                   		<a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a>
+                   		<!-- <img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/> -->
+                   		<a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a>
+                   </li>
+                </ul>
+            </nav>
+            <nav class="visible-xs" collapse="!isCollapsed">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#/" ng-click="isCollapsed = !isCollapsed"></a></li> -->
+
+                    <!-- <li><a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a></li> -->
+
+                    <li><a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+	<div id="wrapper">
+		<ng-view></ng-view>
+	</div>
+	
+
+</body>
+</html>

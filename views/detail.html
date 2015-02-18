@@ -1,0 +1,114 @@
+<div class="bg-pattern2">
+
+<section class="row pusher">
+      <section class="col-sm-6">
+            <div>
+
+         <!--    <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p> -->
+
+            <!-- <pre>{{ dude | json}}</pre>
+ --><!-- 
+            <pre>{{ loginObj.user.data.url | json }}</pre> -->
+         
+            <pre>Airport Resources:
+
+             Departure Terminal: {{ dude.flightStatuses[0].airportResources.departureTerminal }}
+             Departure Gate: {{ dude.flightStatuses[0].airportResources.departureGate }}
+             Arrival Terminal: {{ dude.flightStatuses[0].airportResources.arrivalTerminal }}
+            </pre>
+
+           
+
+            <!-- <pre>Coordinates:
+
+            latitude: {{ dude.appendix.airports[0].latitude}}
+            longitude: {{ dude.appendix.airports[0].longitude}}
+            </pre> -->
+
+            <pre>Phone Number:
+
+            {{ dude.appendix.airlines[0].name }}
+            {{ dude.appendix.airlines[0].phoneNumber }}
+            </pre>
+
+            <pre>Departuring Airport:
+
+            {{ dude.appendix.airports[0].name }}
+            {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+            {{ dude.appendix.airports[0].countryName }}</pre>
+
+            <pre>Arriving Airport(s):
+
+            {{ dude.appendix.airports[1].name }}
+            {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+            {{ dude.appendix.airports[1].countryName }}
+
+            {{ dude.appendix.airports[2].name }}
+            {{ dude.appendix.airports[2].city }} {{ dude.appendix.airports[2].stateCode }}
+            {{ dude.appendix.airports[2].countryName }}</pre>
+
+          
+
+            <pre>Flight Number: 
+            {{ dude.flightStatuses[0].flightNumber }}</pre>
+
+            <pre>Airliner:
+            {{ dude.appendix.airlines[0].name }}</pre>
+
+            <pre>Flight Status:
+            {{ dude.flightStatuses[0].status }}</pre>
+
+            <div>
+
+            <body>
+              <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
+                    <ul>
+                      <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
+
+                      <li>Active (A) - Active flights represent pushed back from gate and airborne flights. They may have departure information depending upon the availability of the data. An active flight may transition to Unknown, Landed, or Redirected. While active, FlightStats tracks information about departure, estimated arrival, and where available, positional data.</li>
+
+                      <li>Unknown (U) - An unknown flight occurs when FlightStats cannot determine the final status of a flight from a data source in a reasonable amount of time. Note, this is a valid state rather than an error state. For example, ASDI information may not be available for certain flights internationally or the airline may not participate in a subscribed GDS.</li>
+
+                      <li>Redirected (R) - The flight is in the air and has changed its destination to an unscheduled airport. After landing at an unscheduled airport, the state will change to Diverted.</li>
+
+                      <li>Landed (L) - The flight landed at the scheduled airport.</li>
+
+                      <li>Diverted (D) - The flight landed at an unscheduled airport.</li>
+
+                      <li>Cancelled (C) - The flight was cancelled.</li>
+
+                      <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
+                    </ul>
+
+            
+            </div>
+      </div>
+      </section>
+
+  
+      <section class="col-sm-6">
+            <h3>Welcome {{loginObj.user.thirdPartyUserData.name}} to the AirChat room!</h3>
+            <div ng-repeat="comment in comments">
+                  <p> {{comment.user}}</p>
+                  <p> {{comment.content}}</p>
+                  <button type="submit" class="btn btn-secondary btn-md" ng-if="loginObj.user.thirdPartyUserData.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! <!-- {{comment.$id}} --></button>
+                  <hr/>
+            </div>
+            <div ng-show="loginObj.user"> 
+              <form ng-submit="createComment()">
+                    <div class="form-group">
+                          <!-- <input id="try" class="form-control" type="text" ng-model="newComment.user" placeholder="First Name"/> -->
+                          <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
+                          </textarea>
+                          <button type="submit" class="btn btn-primary btn-md">Comment!</button>
+                    </div>
+              </form>
+            </div>
+            <div ng-hide="loginObj.user"> 
+              <p>to chat login in with Facebook</p>
+              <button  type="submit" class="btn btn-primary btn-md" ng-click="loginObj.$login('facebook');">Login with Facebook!</button>
+            </div>
+      </section>
+
+</section> <!-- ENDS .row --> 
+</div>

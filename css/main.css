@@ -1,0 +1,191 @@
+/*Font Family*/
+h1, h2, h3 {
+  font-family: 'Cuprum', sans-serif;
+}
+
+a {
+  font-family: 'Cuprum', sans-serif;
+}
+
+
+/* Buttons */
+.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active {
+    background-color: #828282;
+	border: solid 1px #828282;
+    color: #e6e6e6;
+}
+.open>.dropdown-toggle.btn-info{
+	background-color: #af1321;
+	border: solid 1px #af1321;
+    color: #ffffff;
+}
+
+span.text-info{
+	color: #ffffff;
+}
+.btn-info {
+    background-color: #828282;
+	border: solid 1px #828282;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+
+}
+.btn-info:hover{
+	background-color: #8c888a;
+	border: solid 1px #8c888a;
+	-moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+	color: #e6e6e6;
+}
+.btn-success {
+    background-color: #9e0023;
+    border-color: #9e0023;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+}
+.btn-success:hover{
+	background-color: #af1321;
+    border-color: #af1321;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+
+}
+.btn-danger {
+    background-color: #9e0023;
+    border-color: #9e0023;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+
+}
+.btn-danger:hover {
+    background-color: #af1321;
+    border-color: #af1321;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+
+}
+
+.pusher {
+	margin-top: 100px;
+	-webkit-box-shadow: 0 8px 6px 2px #000000;
+	-moz-box-shadow: 0 8px 6px 2px #000000;
+	box-shadow: 0 8px 6px 2px #000000;
+}
+
+.visible-xs{
+	opacity: .7;
+}
+
+.navbar {
+	min-height: 100px;
+	/*background-color: #999;*/
+  	padding: 2px;
+  	color: #000000;
+  	opacity: .8;
+  	-webkit-box-shadow: 0 8px 6px 2px #000000;
+	-moz-box-shadow: 0 8px 6px 2px #000000;
+	box-shadow: 0 8px 6px 2px #000000;
+}
+.navbar-right a {
+	margin-top: 25px;
+}
+.navbar-text > a {
+    color: inherit;
+    text-decoration: none;
+}
+.userPic {
+	/*border-radius: 500px;*/
+	/*border: 1px solid #000;*/
+	margin-top: 25px;
+	-moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+}
+/*.extra {
+
+	-moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+
+}*/
+.col-md-3 input {
+
+	-moz-box-shadow:    inset 0 0 5px #000000;
+    -webkit-box-shadow: inset 0 0 5px #000000;
+    box-shadow:         inset 0 0 5px #000000;
+    margin-top: 10px;
+    /*border-color: ##20541a;*/
+
+}
+
+.form-control:focus {
+	-moz-box-shadow:    inset 0 0 5px #000000;
+    -webkit-box-shadow: inset 0 0 5px #000000;
+    box-shadow:         inset 0 0 5px #000000;
+    border: solid 1px #af1321;
+}
+
+
+.btn {
+	 margin-top: 10px;
+	 width: 100%;
+	/* -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;*/
+}
+.btn-secondary{
+	background-color: #828282;
+	border: solid 1px #828282;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+}
+.btn-secondary:hover{
+	background-color: #8c888a;
+	border: solid 1px #8c888a;
+	-moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+	color: #e6e6e6;
+}
+.btn-primary{
+	background-color: #9e0023;
+    border-color: #9e0023;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+}
+.btn-primary:hover{
+	background-color: #af1321;
+    border-color: #af1321;
+    color: #e6e6e6;
+    -moz-box-shadow:    1px 1px 1px 1px #000000;
+  	-webkit-box-shadow: 1px 1px 1px 1px #000000;
+  	box-shadow:         1px 1px 1px 1px #000000;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+	background-color: #9e0023;
+}
+.bg-pattern{
+	 background-image: url("../img/binding_light.png");
+	/* min-height: 700px;*/
+	 width: 100%;
+}
+.bg-pattern2{
+	 background-image: url("../img/binding_light.png");
+	 max-height: 2000px;
+	  width: 100%;
+}
