@@ -100,6 +100,50 @@
 		<ng-view></ng-view>
 	</div>
 	
+<footer class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand visible-xs" href="index.html">
+                   <img height="50px" src="img/logo.png" alt="" /> 
+                </a>
+            </div>
+            <nav class="hidden-xs">
+                <ul class="nav navbar-nav">
+                    <a href="index.html" role="button" class="navbar-brand">
+                      <img height="70px" src="img/logo.png" alt="" /> 
+                   </a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                		<img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/>
+                	</li>	
+                	<li>
+                   		<a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a>
+                   		<!-- <img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/> -->
+                   		<a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a>
+                   </li>
+                </ul>
+            </nav>
+            <nav class="visible-xs" collapse="!isCollapsed">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#/" ng-click="isCollapsed = !isCollapsed"></a></li> -->
+
+                    <!-- <li><a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a></li> -->
+
+                    <li><a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 </body>
+
 </html>
