@@ -10,7 +10,7 @@ function ($routeProvider){
 		templateUrl: 'views/login.html',
 		controller: 'LoginCtrl'
 	})
-		.when('/register', {
+		.when('/views', {
 		templateUrl: 'views/register.html',
 		controller: 'RegisterCtrl'
 	})
@@ -26,6 +26,7 @@ function ($routeProvider){
 		templateUrl: 'views/search.html',
 		controller: 'SearchCtrl'
 	})
+
 }]);
 
 demo.run(["$firebaseSimpleLogin", "$rootScope", 
