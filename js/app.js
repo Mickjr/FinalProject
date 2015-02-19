@@ -7,6 +7,10 @@ function ($routeProvider){
 	$routeProvider
 		
 		.when("/", {
+		templateUrl: 'views/login.html',
+		controller: 'LoginCtrl'
+	})
+		.when('/views', {
 		templateUrl: 'views/home.html',
 		controller: 'HomeCtrl'
 	})
