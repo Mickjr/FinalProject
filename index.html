@@ -15,11 +15,12 @@
 	
 	
 	<!-- FireBase -->
-	<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+	<!--<script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>-->
 	
 	<!-- AngularFire -->
-	<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.js"></script>
-	<script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.1.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.1/angularfire.min.js"></script>
+
 
 	<!-- Angualar Bootstrap -->
 		<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
@@ -31,6 +32,8 @@
 		<script type="text/javascript" src="js/controllers/detailctrl.js"></script>
 		<script type="text/javascript" src="js/controllers/homectrl.js"></script>
 		<script type="text/javascript" src="js/controllers/searchctrl.js"></script>
+		<script type="text/javascript" src="js/controllers/loginctrl.js"></script>
+		<script type="text/javascript" src="js/controllers/registerctrl.js"></script>
 
 
 	<!-- Font -->
@@ -72,16 +75,13 @@
                       <img height="70px" src="img/logo.png" alt="" /> 
                    </a>
                 </ul>
-                <!-- <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                 	<li>
-                		<img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/>
-                	</li>	
-                	<li>
-                   		<a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a> -->
+                   		<a ng-hide="currentUser" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a>
                    		<!-- <img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/> -->
-                   		<!-- <a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a>
+                   		<a ng-show="currentUser" href="#/" ng-click="authObj.$unauth();">Logout</a>
                    </li>
-                </ul> -->
+                </ul>
             </nav>
             <nav class="visible-xs" collapse="!isCollapsed">
                 <ul class="nav navbar-nav navbar-right">

@@ -10,11 +10,11 @@ function ($routeProvider){
 		templateUrl: 'views/login.html',
 		controller: 'LoginCtrl'
 	})
-		.when('/views', {
+		.when('/register', {
 		templateUrl: 'views/register.html',
 		controller: 'RegisterCtrl'
 	})
-		.when('/views', {
+		.when('/home', {
 		templateUrl: 'views/home.html',
 		controller: 'HomeCtrl'
 	})
@@ -29,16 +29,16 @@ function ($routeProvider){
 
 }]);
 
-demo.run(["$firebaseSimpleLogin", "$rootScope", 
-	function ($firebaseSimpleLogin, $rootScope){
-		var loginRef = new Firebase("https://glowing-heat-2588.firebaseio.com/");
+demo.run(["$rootScope", 
+	function ($rootScope){
+		// var loginRef = new Firebase("https://glowing-heat-2588.firebaseio.com/");
 
-		$rootScope.loginObj = $firebaseSimpleLogin(loginRef);
+		// $rootScope.loginObj = $firebaseSimpleLogin(loginRef);
 
-		$rootScope.$on("$firebaseSimpleLogin:login", 
-			function(e,user){
-				console.log("this is the user object: ", user);
-			});
+		// $rootScope.$on("$firebaseSimpleLogin:login", 
+		// 	function(e,user){
+		// 		console.log("this is the user object: ", user);
+		// 	});
 
 		//console.log("Your Stuff: ", $rootScope.loginObj.user.thirdPartyUserData);
 

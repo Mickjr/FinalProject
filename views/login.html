@@ -30,27 +30,27 @@
 
       <div class="col-md-3">
         <div class="form-group" ng-class=""> 
-          <input name="email" type="text" ng-model="email" placeholder="Enter your email address"  class="form-control"required >
+          <input name="email" type="email" ng-model="adminUser.email" placeholder="Enter your email address"  class="form-control"required >
         </div><!-- ENDS .form-group -->
       </div>
 
       <div class="col-md-3">
         <div class="form-group" ng-class=""> 
-          <input name="password" type="text" ng-model="password" placeholder="Enter your password"  class="form-control"required >
+          <input name="password" type="password" ng-model="adminUser.password" placeholder="Enter your password"  class="form-control"required >
         </div><!-- ENDS .form-group -->
       </div>
 
       <div class="col-md-3">
         <div class="form-group" ng-class=""> 
-        <button type="submit" class="btn btn-primary" ng-click="">Login</button>
+        <button type="submit" class="btn btn-primary" ng-click="adminLogin()">Login</button>
       </div>
 
       <div class="col-md-3">
         <div class="form-group" ng-class="">  
-        <a ng-href="">Facebook</a>
-        <a ng-href="">Google+</a>
-        <a ng-href="">Twitter</a>
-        <a ng-href="views/register.html">Register</a>
+        <a href="" ng-click="facebooklogin()">Facebook</a>
+        <a href="">Google+</a>
+        <a href="">Twitter</a>
+        <a href="#/register/">Register Now</a>
       </div>
 
     </form>
