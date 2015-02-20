@@ -23,7 +23,7 @@ demo.controller('HomeCtrl',[
 
 			//console.log("NEW ONE");
 			var url = "airline.php?"+"airlineId="+$scope.mySearch.airline+"&flightId="+$scope.mySearch.flight+"&yearId="+$scope.mySearch.year+"&monthId="+$scope.mySearch.month+"&dayId="+$scope.mySearch.day;
-			console.log(url);
+			//console.log(url);
 			$http.get(url).
 			  success(function(data, status, headers, config) {
 			    console.log("our data: ", data);
@@ -38,6 +38,17 @@ demo.controller('HomeCtrl',[
 			    // or server returns response with an error status.
 			    console.log("sorry");
 			  });
+
+			 // Simple GET request example :
+			$http.get('/someUrl').
+			success(function(data, status, headers, config) {
+				// this callback will be called asynchronously
+				// when the response is available
+				}).
+			error(function(data, status, headers, config) {
+				// called asynchronously if an error occurs
+				// or server returns response with an error status.
+				});
 
 			//console.log($scope.mySearch);
 		}
