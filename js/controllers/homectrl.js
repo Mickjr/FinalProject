@@ -40,7 +40,7 @@ demo.controller('HomeCtrl',[
 			  });
 
 			 // Simple GET request example :
-			$http.get('/someUrl').
+			$http.get('https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/'.$airlineId.'/'.$flightId.'/dep/'.$yearId.'/'.$monthId.'/'.$dayId.'?&appId=9147c5c6&appKey=8c3299af6667cf363fa580203efd4a8d&utc=true');
 			success(function(data, status, headers, config) {
 				// this callback will be called asynchronously
 				// when the response is available
