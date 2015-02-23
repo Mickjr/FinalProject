@@ -25,7 +25,7 @@
             longitude: {{ dude.appendix.airports[0].longitude}}
             </pre> -->
 
-      <!--       <pre>Phone Number:
+            <!-- <pre>Phone Number:
 
             {{ dude.appendix.airlines[0].name }}
             {{ dude.appendix.airlines[0].phoneNumber }}
@@ -57,9 +57,9 @@
             {{ dude.appendix.airlines[0].name }}</pre>
 
             <pre>Flight Status:
-            {{ dude.flightStatuses[0].status }}</pre>
+            {{ dude.flightStatuses[0].status }}</pre> -->
 
-            <div> -->
+            <div>
 
             <!-- <body>
               <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
@@ -80,7 +80,35 @@
 
                       <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
                     </ul>
- -->
+ -->        <div ng-controller="AccordionDemoCtrl">
+                <p>
+                  <button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
+                  <button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+                </p>
+            <label class="checkbox">
+                <input type="checkbox" ng-model="oneAtATime">
+                Open only one at a time
+            </label>      
+            <accordion close-others="oneAtATime">
+              <accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                  This content is straight in the template.
+              </accordion-group>
+              <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                  {{group.content}}
+              </accordion-group>
+              <accordion-group heading="Dynamic Body Content">
+                <p>The body of the accordion group grows to fit the contents</p>
+                  <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+                  <div ng-repeat="item in items">{{item}}</div>
+              </accordion-group>
+              <accordion-group is-open="status.open">
+                  <accordion-heading>
+                      I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                  </accordion-heading>
+                  This is just some content to illustrate fancy headings.
+              </accordion-group>
+            </accordion>
+      </div>
             
             </div>
       </div>
@@ -101,13 +129,13 @@
                           <!-- <input id="try" class="form-control" type="text" ng-model="newComment.user" placeholder="First Name"/> -->
                           <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
                           </textarea>
-                          <button type="submit" class="btn btn-primary btn-md">Comment!</button>
+                          <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Comment!</button>
                     </div>
               </form>
             </div>
             <div ng-hide="loginObj.user"> 
               <p>to chat login in with Facebook</p>
-              <button  type="submit" class="btn btn-primary btn-md" ng-click="loginObj.$login('facebook');">Login with Facebook!</button>
+              <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
             </div>
       </section>
 
