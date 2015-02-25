@@ -80,38 +80,26 @@
 
                       <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
                     </ul>
- -->        <div ng-controller="AccordionDemoCtrl">
-                <p>
-                  <button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
-                  <button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
-                </p>
-            <label class="checkbox">
-                <input type="checkbox" ng-model="oneAtATime">
-                Open only one at a time
-            </label>      
-            <accordion close-others="oneAtATime">
-              <accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                  This content is straight in the template.
-              </accordion-group>
-              <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                  {{group.content}}
-              </accordion-group>
-              <accordion-group heading="Dynamic Body Content">
-                <p>The body of the accordion group grows to fit the contents</p>
-                  <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
-                  <div ng-repeat="item in items">{{item}}</div>
-              </accordion-group>
-              <accordion-group is-open="status.open">
-                  <accordion-heading>
-                      I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                  </accordion-heading>
-                  This is just some content to illustrate fancy headings.
-              </accordion-group>
-            </accordion>
-      </div>
-            
-            </div>
-      </div>
+ --><div ng-app>
+    <div class="accordion__container" ng-controller="myCtrl">
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab one')">Tab 1</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">Tab content goes here!</div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab two')">Tab 2</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">Tab content goes here!</div>
+        </div>
+        <!-- .accordion__tab -->
+        <div class="accordion__tab">
+            <div class="accordion__tab-title" ng-click="openTab('tab three')">Tab 3</div>
+            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">Tab content goes here!</div>
+        </div>
+        <!-- .accordion__tab -->
+    </div>
+</div>
+
       </section>
 
   
