@@ -9,7 +9,7 @@ demo.controller('DetailCtrl', [
 		$http.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'+$rootScope.dude.appendix.airports[0].city+'%2C%20'+$rootScope.dude.appendix.airports[0].stateCode+'%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
 		.then(function(response){
 	    $scope.weather = response.data
-	    // console.log(response)
+	    console.log(response)
 	    });
 
 	    $http.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'+$rootScope.dude.appendix.airports[1].city+'%2C%20'+$rootScope.dude.appendix.airports[1].stateCode+'%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
@@ -18,11 +18,11 @@ demo.controller('DetailCtrl', [
 	    console.log(response)
 	    });
 
-		$http.get('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city='$rootScope.dude.appendix.airports[1].city+'&region='+$rootScope.dude.appendix.airports[2].stateCode+'&country='+$rootScope.dude.appendix.airports[2].countryCode+'&date_created=This%20Week')
-		.then(function(response){
-	    $scope.events = response.data
-	    console.log(response)
-	    });
+		// $http.get('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city='+$rootScope.dude.appendix.airports[1].city+'&region='+$rootScope.dude.appendix.airports[2].stateCode+'&country='+$rootScope.dude.appendix.airports[2].countryCode+'&date_created=This%20Week')
+		// .then(function(response){
+	 //    $scope.city = response.data
+	 //    console.log(response)
+	 //    });
 
 		var flightRef = new Firebase('https://glowing-heat-2588.firebaseio.com/flights/'+$routeParams.flightId);
 		$scope.flight = $firebase(flightRef).$asArray();
