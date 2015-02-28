@@ -9,8 +9,16 @@ demo.controller('DetailCtrl', [
 		$http.get('http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%22'+$rootScope.dude.appendix.airports[0].postalCode+'%22&format=json')
 		.then(function(response){
 	    $scope.weather = response.data
+	    // console.log(response)
+	    });
+
+	    $http.get('http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%22'+$rootScope.dude.appendix.airports[1].postalCode+'%22&format=json')
+		.then(function(response){
+	    $scope.weather2 = response.data
 	    console.log(response)
 	    });
+
+
 
 		var flightRef = new Firebase('https://glowing-heat-2588.firebaseio.com/flights/'+$routeParams.flightId);
 		$scope.flight = $firebase(flightRef).$asArray();
