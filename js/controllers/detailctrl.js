@@ -6,13 +6,13 @@ demo.controller('DetailCtrl', [
 	"$http",
 	function ($scope, $rootScope, $firebase, $routeParams, $http){
 		
-		$http.get('http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%22'+$rootScope.dude.appendix.airports[0].postalCode+'%22&format=json')
+		$http.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'+$rootScope.dude.appendix.airports[0].city+'%2C%20'+$rootScope.dude.appendix.airports[0].stateCode+'%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
 		.then(function(response){
 	    $scope.weather = response.data
 	    // console.log(response)
 	    });
 
-	    $http.get('http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%22'+$rootScope.dude.appendix.airports[1].postalCode+'%22&format=json')
+	    $http.get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'+$rootScope.dude.appendix.airports[1].city+'%2C%20'+$rootScope.dude.appendix.airports[1].stateCode+'%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
 		.then(function(response){
 	    $scope.weather2 = response.data
 	    console.log(response)
