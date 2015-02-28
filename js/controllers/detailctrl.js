@@ -18,7 +18,11 @@ demo.controller('DetailCtrl', [
 	    console.log(response)
 	    });
 
-
+		$http.get('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city='$rootScope.dude.appendix.airports[1].city+'&region='+$rootScope.dude.appendix.airports[2].stateCode+'&country='+$rootScope.dude.appendix.airports[2].countryCode+'&date_created=This%20Week')
+		.then(function(response){
+	    $scope.events = response.data
+	    console.log(response)
+	    });
 
 		var flightRef = new Firebase('https://glowing-heat-2588.firebaseio.com/flights/'+$routeParams.flightId);
 		$scope.flight = $firebase(flightRef).$asArray();
