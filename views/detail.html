@@ -7,14 +7,71 @@
             <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p>
 
           
-          <pre>{{ weather | json }}</pre>
-          <pre>{{ dude | json}}</pre>
-          <pre>{{ weather2 | json }}</pre>
+          <!-- <pre>{{ weatherDepart.query.results.channel.item.forecast | json}}</pre> -->
+          
+          <!-- <pre>{{ weather2 | json }}</pre> -->
          <!--  <pre>{{ events | json }}</pre> -->
 
 
+            <!-- <pre>{{ weatherDepart.query.results.location.city }}</pre>
 
+ -->
             <pre>{{ loginObj.user.data.url | json }}</pre> 
+
+
+            <pre>Current temperature for  {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
+
+             Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherDepart.query.results.channel.item.condition.text }}
+          
+            </pre>
+
+            <pre>Current temperature for   {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
+
+             Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
+          
+            </pre>
+
+            <pre>5-Day forecast for  {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
+
+             Date: {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+             Day: {{ weatherDepart.query.results.channel.item.forecast[0].day }}
+             High: {{ weatherDepart.query.results.channel.item.forecast[0].high }}
+             Weather: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
+
+             Date: {{ weatherDepart.query.results.channel.item.forecast[1].date}}
+             Day: {{ weatherDepart.query.results.channel.item.forecast[1].day }}
+             High: {{ weatherDepart.query.results.channel.item.forecast[1].high }}
+             Weather: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
+
+             Date: {{ weatherDepart.query.results.channel.item.forecast[2].date}}
+             Day: {{ weatherDepart.query.results.channel.item.forecast[2].day }}
+             High: {{ weatherDepart.query.results.channel.item.forecast[2].high }}
+             Weather: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
+
+             Date: {{ weatherDepart.query.results.channel.item.forecast[3].date}}
+             Day: {{ weatherDepart.query.results.channel.item.forecast[3].day }}
+             High: {{ weatherDepart.query.results.channel.item.forecast[3].high }}
+             Weather: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
+
+             Date: {{ weatherDepart.query.results.channel.item.forecast[4].date}}
+             Day: {{ weatherDepart.query.results.channel.item.forecast[4].day }}
+             High: {{ weatherDepart.query.results.channel.item.forecast[4].high }}
+             Weather: {{ weatherDepart.query.results.channel.item.forecast[4].text }}
+
+        
+            </pre>
+
+            <pre>Current temperature for   {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
+
+             Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
+          
+            </pre>
+
+
+
          
             <pre>Airport Resources:
 
@@ -40,14 +97,15 @@
             <pre>Departuring Airport:
 
             {{ dude.appendix.airports[0].name }}
-            {{ dude.appendix.airports[0].postalCode }}
             {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+            {{ dude.appendix.airports[0].postalCode }}
             {{ dude.appendix.airports[0].countryName }}</pre>
 
             <pre>Arriving Airport(s):
 
             {{ dude.appendix.airports[1].name }}
             {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+            {{ dude.appendix.airports[1].postalCode }}
             {{ dude.appendix.airports[1].countryName }}
 
             {{ dude.appendix.airports[2].name }}
@@ -64,6 +122,9 @@
 
             <pre>Flight Status:
             {{ dude.flightStatuses[0].status }}</pre>
+
+            <pre>Weekly Forecast for {{ dude.appendix.airports[0].city }}:
+            {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }}</pre>
 
             <div>
 

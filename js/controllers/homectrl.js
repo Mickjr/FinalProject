@@ -13,7 +13,7 @@ demo.controller('HomeCtrl',[
 		];
 
 		$scope.printAir = function (){
-			$scope.mySearch = {
+			$rootScope.mySearch = {
 				year : $scope.dt.getFullYear().toString(),
 				month : ($scope.dt.getMonth()+1).toString(),
 				day : $scope.dt.getDate().toString(),
@@ -22,7 +22,7 @@ demo.controller('HomeCtrl',[
 			}
 
 			//console.log("NEW ONE");
-			var url = "airline.php?"+"airlineId="+$scope.mySearch.airline+"&flightId="+$scope.mySearch.flight+"&yearId="+$scope.mySearch.year+"&monthId="+$scope.mySearch.month+"&dayId="+$scope.mySearch.day;
+			var url = "airline.php?"+"airlineId="+$rootScope.mySearch.airline+"&flightId="+$rootScope.mySearch.flight+"&yearId="+$rootScope.mySearch.year+"&monthId="+$rootScope.mySearch.month+"&dayId="+$rootScope.mySearch.day;
 			//console.log(url);
 			$http.get(url).
 			  success(function(data, status, headers, config) {
@@ -39,11 +39,11 @@ demo.controller('HomeCtrl',[
 			    console.log("sorry");
 			  });
 
-			//console.log($scope.mySearch);
+			//console.log($rootScope.mySearch);
 		}
 
 		$http.get('airline.json').then(function(response){
-	      $scope.airlines = response.data.airlines
+	    $scope.airlines = response.data.airlines
 	    });
 
 	    // in input is not equal to a 
