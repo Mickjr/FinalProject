@@ -1,4 +1,4 @@
-<div class="bg-pattern2">
+<div class="">
 
 <section class="row pusher">
       <section class="col-sm-6">
@@ -19,58 +19,79 @@
             <pre>{{ loginObj.user.data.url | json }}</pre> 
 
 
-            <pre>Current temperature for  {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
+            <pre>Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
 
              Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.condition.text }}
           
             </pre>
 
-            <pre>Current temperature for   {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
+        
+            <pre>5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
 
-             Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
-          
-            </pre>
-
-            <pre>5-Day forecast for  {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
-
-             Date: {{ weatherDepart.query.results.channel.item.forecast[0].date}}
              Day: {{ weatherDepart.query.results.channel.item.forecast[0].day }}
-             High: {{ weatherDepart.query.results.channel.item.forecast[0].high }}
+             Date: {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+             High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
 
-             Date: {{ weatherDepart.query.results.channel.item.forecast[1].date}}
              Day: {{ weatherDepart.query.results.channel.item.forecast[1].day }}
-             High: {{ weatherDepart.query.results.channel.item.forecast[1].high }}
+             Date: {{ weatherDepart.query.results.channel.item.forecast[1].date}}
+             High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
 
-             Date: {{ weatherDepart.query.results.channel.item.forecast[2].date}}
              Day: {{ weatherDepart.query.results.channel.item.forecast[2].day }}
-             High: {{ weatherDepart.query.results.channel.item.forecast[2].high }}
+             Date: {{ weatherDepart.query.results.channel.item.forecast[2].date}}
+             High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
 
-             Date: {{ weatherDepart.query.results.channel.item.forecast[3].date}}
              Day: {{ weatherDepart.query.results.channel.item.forecast[3].day }}
-             High: {{ weatherDepart.query.results.channel.item.forecast[3].high }}
+             Date: {{ weatherDepart.query.results.channel.item.forecast[3].date}}
+             High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
 
-             Date: {{ weatherDepart.query.results.channel.item.forecast[4].date}}
              Day: {{ weatherDepart.query.results.channel.item.forecast[4].day }}
-             High: {{ weatherDepart.query.results.channel.item.forecast[4].high }}
+             Date: {{ weatherDepart.query.results.channel.item.forecast[4].date}}
+             High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
              Weather: {{ weatherDepart.query.results.channel.item.forecast[4].text }}
 
         
             </pre>
 
-            <pre>Current temperature for   {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
+            <pre>Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
 
              Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
              Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
           
             </pre>
 
+            <pre>5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
 
+             Day: {{ weatherArrive.query.results.channel.item.forecast[0].day }}
+             Date: {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+             High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
+
+             Day: {{ weatherArrive.query.results.channel.item.forecast[1].day }}
+             Date: {{ weatherArrive.query.results.channel.item.forecast[1].date}}
+             High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
+
+             Day: {{ weatherArrive.query.results.channel.item.forecast[2].day }}
+             Date: {{ weatherArrive.query.results.channel.item.forecast[2].date}}
+             High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
+
+             Day: {{ weatherArrive.query.results.channel.item.forecast[3].day }}
+             Date: {{ weatherArrive.query.results.channel.item.forecast[3].date}}
+             High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
+
+             Day: {{ weatherArrive.query.results.channel.item.forecast[4].day }}
+             Date: {{ weatherArrive.query.results.channel.item.forecast[4].date}}
+             High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+             Weather: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
+
+           </pre>
 
          
             <pre>Airport Resources:
@@ -94,7 +115,7 @@
             {{ dude.appendix.airlines[0].phoneNumber }}
             </pre>
 
-            <pre>Departuring Airport:
+            <pre>Departing Airport:
 
             {{ dude.appendix.airports[0].name }}
             {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
@@ -123,12 +144,8 @@
             <pre>Flight Status:
             {{ dude.flightStatuses[0].status }}</pre>
 
-            <pre>Weekly Forecast for {{ dude.appendix.airports[0].city }}:
-            {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }} {{ dude.flightStatuses[0].status }}</pre>
-
-            <div>
-
-            <body>
+            
+            <!-- <pre>
               <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
                     <ul>
                       <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
@@ -147,6 +164,7 @@
 
                       <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
                     </ul>
+            </pre> -->
 
 <div ng-app>
     <div class="accordion__container" ng-controller="myCtrl">
