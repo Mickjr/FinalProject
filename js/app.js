@@ -1,4 +1,4 @@
-var demo = angular.module('demo', ['ngRoute','firebase', 'ui.bootstrap']);
+var demo = angular.module('demo', ['ngRoute','firebase', 'ui.bootstrap','ngSanitize']);
 
 demo.config([
 "$routeProvider",
@@ -18,7 +18,7 @@ function ($routeProvider){
 		templateUrl: 'views/home.html',
 		controller: 'HomeCtrl'
 	})
-		.when('/detail/:flightId', {
+		.when('/detail/:year/:month/:day/:airline/:flight', {
 		templateUrl: 'views/detail.html',
 		controller: 'DetailCtrl'
 	})

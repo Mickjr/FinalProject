@@ -1,11 +1,9 @@
 <?php
+	
+	$cityId = urlencode($_GET['cityId']);
+	// $regionId = urlencode($_GET['regionId']);
+	$countryId = urlencode($_GET['countryId']);
 
-	$airlineId = urlencode($_GET['airlineId']);
-	$flightId = urlencode($_GET['flightId']);
-	$yearId = urlencode($_GET['yearId']);
-	$monthId = urlencode($_GET['monthId']);
-	$dayId = urlencode($_GET['dayId']);
-
-	$JSONobj = file_get_contents('https://api.flightstats.com/flex/flightstatus/rest/v2/json/flight/status/'.$airlineId.'/'.$flightId.'/dep/'.$yearId.'/'.$monthId.'/'.$dayId.'?&appId=9147c5c6&appKey=8c3299af6667cf363fa580203efd4a8d&utc=true');
+	$JSONobj = file_get_contents('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city='.$cityID.'&region=&country='.$regionId.'&date_created=This%20Week');
 	echo $JSONobj;
 ?>

@@ -4,7 +4,7 @@
       <section class="col-sm-6">
             <div>
 
-            <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p>
+            <!-- <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p> -->
 
           
           <!-- <pre>{{ weatherDepart.query.results.channel.item.forecast | json}}</pre> -->
@@ -16,7 +16,7 @@
             <!-- <pre>{{ weatherDepart.query.results.location.city }}</pre>
 
  -->
-            <pre>{{ loginObj.user.data.url | json }}</pre> 
+         <!--    <pre>{{ loginObj.user.data.url | json }}</pre>  -->
 
 
             <pre>Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
@@ -167,7 +167,7 @@
             </pre> -->
 
 <div ng-app>
-    <div class="accordion__container" ng-controller="myCtrl">
+    <div class="accordion__container" >
         <div class="accordion__tab">
             <div class="accordion__tab-title" ng-click="openTab('tab one')">Tab 1</div>
             <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">Tab content goes here!</div>
@@ -190,14 +190,14 @@
 
   
       <section class="col-sm-6">
-            <h3>Welcome {{loginObj.user.thirdPartyUserData.name}} to the AirChat room!</h3>
+            <h3>Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!</h3>
             <div ng-repeat="comment in comments">
                   <p> {{comment.user}}</p>
                   <p> {{comment.content}}</p>
-                  <button type="submit" class="btn btn-secondary btn-md" ng-if="loginObj.user.thirdPartyUserData.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! <!-- {{comment.$id}} --></button>
+                  <button type="submit" class="btn btn-secondary btn-md" ng-if="currentUser.facebook.cachedUserProfile.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! {{comment.$id}}</button>
                   <hr/>
             </div>
-            <div ng-show="loginObj.user"> 
+            <div ng-show="currentUser.facebook"> 
               <form ng-submit="createComment()">
                     <div class="form-group">
                           <!-- <input id="try" class="form-control" type="text" ng-model="newComment.user" placeholder="First Name"/> -->
@@ -207,10 +207,23 @@
                     </div>
               </form>
             </div>
-            <div ng-hide="loginObj.user"> 
+            <div ng-hide="currentUser.facebook"> 
               <p>to chat login in with Facebook</p>
               <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
             </div>
+
+
+            <h3>Event Data</h3>
+            <div ng-repeat="event in eventbrite.events">
+                <div>
+                    <img ng-src="{{event.event.logo}}" alt=""/>
+                    <h4>{{event.event.title}}</h4>
+                    <p ng-bind-html="event.event.description"></p>
+                    <!-- <pre> {{event | json }}</pre> -->
+                </div>
+            </div>
+
+
       </section>
 
 </section> <!-- ENDS .row --> 

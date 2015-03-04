@@ -21,25 +21,10 @@ demo.controller('HomeCtrl',[
 				flight : $scope.myFlight
 			}
 
-			//console.log("NEW ONE");
-			var url = "airline.php?"+"airlineId="+$rootScope.mySearch.airline+"&flightId="+$rootScope.mySearch.flight+"&yearId="+$rootScope.mySearch.year+"&monthId="+$rootScope.mySearch.month+"&dayId="+$rootScope.mySearch.day;
-			//console.log(url);
-			$http.get(url).
-			  success(function(data, status, headers, config) {
-			    console.log("our data: ", data);
-			    console.log("status: ", status);
-			    $rootScope.dude = data;
-			    console.log($rootScope.dude);
-			    $location.path('/detail/'+$rootScope.dude.flightStatuses[0].flightId);
-			  }).
-			  error(function(data, status, headers, config) {
-			    
-			    // called asynchronously if an error occurs
-			    // or server returns response with an error status.
-			    console.log("sorry");
-			  });
+			$location.path('/detail/'+$rootScope.mySearch.year+'/'+$rootScope.mySearch.month+'/'+$rootScope.mySearch.day+'/'+$rootScope.mySearch.airline+'/'+$rootScope.mySearch.flight);
 
-			//console.log($rootScope.mySearch);
+			
+			// console.log($rootScope.mySearch);
 		}
 
 		$http.get('airline.json').then(function(response){
