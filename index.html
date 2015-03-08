@@ -59,8 +59,10 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" ng-click="isCollapsed = !isCollapsed">
                     <span class="sr-only">Toggle navigation</span>
-                    <h5 ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</h5>
-                    <!-- <span class="icon-bar"></span> -->
+                    <!-- <h2 ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</h2> -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand visible-xs" href="index.html">
                    <img height="50px" src="img/logo.png" alt="" /> 
@@ -74,7 +76,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 	<li>
-                   		<a ng-hide="currentUser" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a>
+                   		<!-- <a ng-hide="currentUser" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a> -->
                    		<!-- <img height="50px" class="userPic" ng-show="loginObj.user" ng-src="{{loginObj.user.thirdPartyUserData.picture.data.url}}"/> -->
                    		<a ng-show="currentUser" href="#/" ng-click="authObj.$unauth();">Logout</a>
                    </li>
@@ -82,11 +84,10 @@
             </nav>
             <nav class="visible-xs" collapse="!isCollapsed">
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- <li><a href="#/" ng-click="isCollapsed = !isCollapsed"></a></li> -->
+                  <li>
+                   <a ng-hide="currentUser" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a>
 
-                    <!-- <li><a ng-hide="loginObj.user" href="#/" ng-click="loginObj.$login('facebook');">Facebook Login</a></li> -->
-
-                    <li><a ng-show="loginObj.user" href="#/" ng-click="loginObj.$logout();">Logout</a></li>
+                    <li><a ng-show="currentUser" href="#/" ng-click="authObj.$unauth();">Logout</a></li>
                 </ul>
             </nav>
         </div>
