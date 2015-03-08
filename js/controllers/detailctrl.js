@@ -1,11 +1,46 @@
 demo.controller('DetailCtrl', [
 	"$scope",
+	"$log",
 	"$rootScope",
 	"$firebase",
 	"$firebaseAuth",
 	"$routeParams",
 	"$http",
-	function ($scope, $rootScope, $firebase, $firebaseAuth, $routeParams, $http){
+	function ($scope, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http){
+
+		
+
+		  $scope.mytime = new Date();
+
+		  $scope.hstep = 1;
+		  $scope.mstep = 15;
+
+		  $scope.options = {
+		    hstep: [1, 2, 3],
+		    mstep: [1, 5, 10, 15, 25, 30]
+		  	};
+
+		  $scope.ismeridian = true;
+
+		  $scope.toggleMode = function() {
+		    $scope.ismeridian = ! $scope.ismeridian;
+		  	};
+
+		  $scope.update = function() {
+		    var d = new Date();
+		    d.setHours( 14 );
+		    d.setMinutes( 0 );
+		    $scope.mytime = d;
+		  	};
+
+		  $scope.changed = function () {
+		    $log.log('Time changed to: ' + $scope.mytime);
+		  	}; 	
+
+		  $scope.changed = function () {
+    		$log.log('Time changed to: ' + $scope.mytime);
+  			};
+
 
 		$scope.myInterval = 5000;
 		$scope.slides = [{image: './img/1.jpg', text: 'Welcome to AirChat!'},

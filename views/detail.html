@@ -17,6 +17,7 @@
 
        
             <br>
+
             <section class="col-sm-6">
 
             <div ng-controller="DetailCtrl">
@@ -24,6 +25,10 @@
                 </button>
                 <hr>
                 <div collapse="isCollapsed">
+                <div class="well well-lg">Current Time:
+                <br>
+                <blockquote>{{mytime | date:'shortTime' }}</blockquote>
+                </div>
                 <div class="well well-lg">Airport Resources:
                 <br>
                 <blockquote>Departure Terminal: {{ dude.flightStatuses[0].airportResources.departureTerminal }}
