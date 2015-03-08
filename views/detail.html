@@ -81,7 +81,7 @@
                 <blockquote>{{ dude.flightStatuses[0].flightNumber }}</blockquote>
                 </div>
 
-                <div class="well well-lg">Airliner:
+                <div class="well well-lg">Airline Carrier:
                 <br>
                 <blockquote>{{ dude.appendix.airlines[0].name }}</blockquote>
                 </div>
@@ -136,7 +136,7 @@
                 </button>
                 <hr>
                 <div collapse="isCollapsed">
-                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
