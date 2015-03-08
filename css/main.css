@@ -100,9 +100,9 @@ span.text-info{
 
 .pusher {
 	margin-top: 100px;
-	-webkit-box-shadow: 0 8px 6px 2px #000000;
+	/*-webkit-box-shadow: 0 8px 6px 2px #000000;
 	-moz-box-shadow: 0 8px 6px 2px #000000;
-	box-shadow: 0 8px 6px 2px #000000;
+	box-shadow: 0 8px 6px 2px #000000;*/
 }
 
 .visible-xs{

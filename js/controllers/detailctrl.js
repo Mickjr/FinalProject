@@ -7,9 +7,16 @@ demo.controller('DetailCtrl', [
 	"$http",
 	function ($scope, $rootScope, $firebase, $firebaseAuth, $routeParams, $http){
 
+		$scope.myInterval = 5000;
+		$scope.slides = [{image: './img/1.jpg', text: 'Welcome to AirChat!'},
+						{image: './img/2.jpg', text: 'Welcome to AirChat!'},
+						{image: './img/3.jpg', text: 'Welcome to AirChat!'}
+		];
+
+		$scope.isCollapsed = true;
+
 		var ref = new Firebase("https://glowing-heat-2588.firebaseio.com");
     	$rootScope.authObj = $firebaseAuth(ref);
-
 		$rootScope.authObj.$onAuth(function(authData) {
 			if (authData) {
 				$rootScope.currentUser = authData;
@@ -18,7 +25,6 @@ demo.controller('DetailCtrl', [
 				console.log("Logged out");
 			}
 		});
-
 		// $routeParam.flightId;
 		//console.log("NEW ONE");
 		var url = "airline.php?"+"airlineId="+$routeParams.airline+"&flightId="+$routeParams.flight+"&yearId="+$routeParams.year+"&monthId="+$routeParams.month+"&dayId="+$routeParams.day;
@@ -64,19 +70,6 @@ demo.controller('DetailCtrl', [
 		    // or server returns response with an error status.
 		    console.log("sorry");
 		  });
-
-		// $http.get('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city='+$rootScope.dude.appendix.airports[1].city+'&region='+$rootScope.dude.appendix.airports[2].stateCode+'&country='+$rootScope.dude.appendix.airports[2].countryCode+'&date_created=This%20Week')
-		// .then(function(response){
-	 //    $scope.city = response.data
-	 //    console.log(response)
-	 //    });
-        //https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city=Charlotte&region=NC&country=US&date_created=This%20Week
-
-  //       $http.get('https://www.eventbrite.com/json/event_search?app_key=JUYT3UGQP4K235L3WV&city=Charlotte&region=NC&country=US&date_created=This%20Week&callback=JSON_CALLBACK')
-		// .then(function(response){
-	 //    	$scope.eventbrite = response.data;
-	 //    	console.log("Events: ", $scope.eventbrite);
-	 //    });
 
 		var flightRef = new Firebase('https://glowing-heat-2588.firebaseio.com/flights/'+$routeParams.flightId);
 		$scope.flight = $firebase(flightRef).$asArray();

@@ -1,9 +1,205 @@
-<div class="">
+<div style="" class="pusher">
+    <carousel interval="myInterval">
+      <slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <!-- <p>{{slide.text}}</p> -->
+        </div>
+      </slide>
+    </carousel>
+</div>
+      <section class="">
+        
+                <!-- <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
+                <br>
+                </div> 
+                
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[1].day }} {{ weatherDepart.query.results.channel.item.forecast[1].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
+                <br>
+                </div> 
 
-<section class="row pusher">
-      <section class="col-sm-6">
-            <div>
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[2].day }} {{ weatherDepart.query.results.channel.item.forecast[2].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
+                <br>
+                </div>
 
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[3].day }} {{ weatherDepart.query.results.channel.item.forecast[3].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[4].day }} {{ weatherDepart.query.results.channel.item.forecast[4].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ rootScope.mySearchpart.query.results.channel.item.forecast[4].text }}
+                <br>
+                </div>
+
+
+                </div>
+     
+ -->
+
+                                        <!-- Tabs -->    
+
+        
+                <!-- <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
+                <br>
+                </div> 
+                
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[1].day }} {{ weatherArrive.query.results.channel.item.forecast[1].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
+                <br>
+                </div> 
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[2].day }} {{ weatherArrive.query.results.channel.item.forecast[2].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[3].day }} {{ weatherArrive.query.results.channel.item.forecast[3].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[4].day }} {{ weatherArrive.query.results.channel.item.forecast[4].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
+                <br>
+                </div>
+
+              </section> -->
+
+                                           <!-- Tabs -->  
+
+              <!-- <section class="col-sm-6">
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                <br>
+                Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.condition.text }}
+                </div>
+                </div>
+
+     
+
+        
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                <br>
+                Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
+                </div>
+                </div>
+            
+
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                <br>
+                Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
+                </div>
+                </div> -->
+
+
+
+
+
+
+
+
+
+            </section>
             <!-- <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p> -->
 
           
@@ -18,82 +214,12 @@
  -->
          <!--    <pre>{{ loginObj.user.data.url | json }}</pre>  -->
 
-
-            <pre>Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
-
-             Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.condition.text }}
-          
-            </pre>
-
         
-            <pre>5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}:
+            
 
-             Day: {{ weatherDepart.query.results.channel.item.forecast[0].day }}
-             Date: {{ weatherDepart.query.results.channel.item.forecast[0].date}}
-             High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
+            
 
-             Day: {{ weatherDepart.query.results.channel.item.forecast[1].day }}
-             Date: {{ weatherDepart.query.results.channel.item.forecast[1].date}}
-             High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
-
-             Day: {{ weatherDepart.query.results.channel.item.forecast[2].day }}
-             Date: {{ weatherDepart.query.results.channel.item.forecast[2].date}}
-             High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
-
-             Day: {{ weatherDepart.query.results.channel.item.forecast[3].day }}
-             Date: {{ weatherDepart.query.results.channel.item.forecast[3].date}}
-             High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
-
-             Day: {{ weatherDepart.query.results.channel.item.forecast[4].day }}
-             Date: {{ weatherDepart.query.results.channel.item.forecast[4].date}}
-             High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherDepart.query.results.channel.item.forecast[4].text }}
-
-        
-            </pre>
-
-            <pre>Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
-
-             Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
-          
-            </pre>
-
-            <pre>5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}:
-
-             Day: {{ weatherArrive.query.results.channel.item.forecast[0].day }}
-             Date: {{ weatherArrive.query.results.channel.item.forecast[0].date}}
-             High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
-
-             Day: {{ weatherArrive.query.results.channel.item.forecast[1].day }}
-             Date: {{ weatherArrive.query.results.channel.item.forecast[1].date}}
-             High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
-
-             Day: {{ weatherArrive.query.results.channel.item.forecast[2].day }}
-             Date: {{ weatherArrive.query.results.channel.item.forecast[2].date}}
-             High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
-
-             Day: {{ weatherArrive.query.results.channel.item.forecast[3].day }}
-             Date: {{ weatherArrive.query.results.channel.item.forecast[3].date}}
-             High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
-
-             Day: {{ weatherArrive.query.results.channel.item.forecast[4].day }}
-             Date: {{ weatherArrive.query.results.channel.item.forecast[4].date}}
-             High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
-             Weather: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
-
-           </pre>
-
-         
+            
             <pre>Airport Resources:
 
              Departure Terminal: {{ dude.flightStatuses[0].airportResources.departureTerminal }}
@@ -166,28 +292,184 @@
                     </ul>
             </pre> -->
 
-<div ng-app>
-    <div class="accordion__container" >
-        <div class="accordion__tab">
-            <div class="accordion__tab-title" ng-click="openTab('tab one')">Tab 1</div>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab one')">Tab content goes here!</div>
-        </div>
-        <!-- .accordion__tab -->
-        <div class="accordion__tab">
-            <div class="accordion__tab-title" ng-click="openTab('tab two')">Tab 2</div>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab two')">Tab content goes here!</div>
-        </div>
-        <!-- .accordion__tab -->
-        <div class="accordion__tab">
-            <div class="accordion__tab-title" ng-click="openTab('tab three')">Tab 3</div>
-            <div class="accordion__tab-content" ng-show="isOpenTab('tab three')">Tab content goes here!</div>
-        </div>
-        <!-- .accordion__tab -->
-      </div>
-    </div>
 
       </section>
 
+
+        <section class="col-sm-6">
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                <br>
+                Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.condition.text }}
+                </div>
+                </div>
+
+     
+
+        
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                <br>
+                Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.condition.text }}
+                </div>
+                </div>
+
+            </section>
+
+       <section class="col-sm-6">
+        
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
+                <br>
+                </div> 
+                
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[1].day }} {{ weatherDepart.query.results.channel.item.forecast[1].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
+                <br>
+                </div> 
+
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[2].day }} {{ weatherDepart.query.results.channel.item.forecast[2].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[3].day }} {{ weatherDepart.query.results.channel.item.forecast[3].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[4].day }} {{ weatherDepart.query.results.channel.item.forecast[4].date}}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ rootScope.mySearchpart.query.results.channel.item.forecast[4].text }}
+                <br>
+                </div>
+
+
+                </div>
+     
+
+
+                                        <!-- Tabs -->    
+
+        
+                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </button>
+                <hr>
+                <div collapse="isCollapsed">
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
+                <br>
+                </div> 
+                
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[1].day }} {{ weatherArrive.query.results.channel.item.forecast[1].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
+                <br>
+                </div> 
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[2].day }} {{ weatherArrive.query.results.channel.item.forecast[2].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[3].day }} {{ weatherArrive.query.results.channel.item.forecast[3].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
+                <br>
+                </div>
+
+                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[4].day }} {{ weatherArrive.query.results.channel.item.forecast[4].date}}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
+                Weather: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
+                <br>
+                </div>
+
+              </section>
+
+                                           <!-- Tabs -->  
+
+             
+<!-- 
   
       <section class="col-sm-6">
             <h3>Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!</h3>
@@ -200,7 +482,6 @@
             <div ng-show="currentUser.facebook"> 
               <form ng-submit="createComment()">
                     <div class="form-group">
-                          <!-- <input id="try" class="form-control" type="text" ng-model="newComment.user" placeholder="First Name"/> -->
                           <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
                           </textarea>
                           <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Comment!</button>
@@ -218,13 +499,13 @@
                 <div>
                     <img ng-src="{{event.event.logo}}" alt=""/>
                     <h4>{{event.event.title}}</h4>
-                    <p ng-bind-html="event.event.description"></p>
+                    <p ng-bind-html="event.event.description"></p> -->
                     <!-- <pre> {{event | json }}</pre> -->
-                </div>
+                <!-- </div>
             </div>
 
 
-      </section>
-
-</section> <!-- ENDS .row --> 
+      </section> -->
+<!-- 
+</section> --> <!-- ENDS .row --> 
 </div>
