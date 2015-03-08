@@ -10,6 +10,9 @@ demo.controller('DetailCtrl', [
 
 		
 
+          $scope.dynamicPopover = 'Hello, World!';
+          $scope.dynamicPopoverTitle = 'Title';
+
 		  $scope.mytime = new Date();
 
 		  $scope.hstep = 1;
