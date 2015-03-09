@@ -33,6 +33,12 @@ h1, h2, h3 {
 
 a {
   font-family: 'Cuprum', sans-serif;
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn {
+  font-family: 'Cuprum', sans-serif;
 }
 
 
