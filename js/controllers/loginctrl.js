@@ -1,6 +1,12 @@
 demo.controller('LoginCtrl', function($scope, $rootScope, $firebase, $firebaseAuth, $location) {
     console.log("Login Control");
 
+    $scope.myInterval = 5000;
+		$scope.slides = [{image: './img/1.jpg', text: 'Welcome to AirChat!'},
+						{image: './img/2.jpg', text: 'Welcome to AirChat!'},
+						{image: './img/3.jpg', text: 'Welcome to AirChat!'}
+		];
+
     var ref = new Firebase("https://glowing-heat-2588.firebaseio.com");
     $rootScope.authObj = $firebaseAuth(ref);
 

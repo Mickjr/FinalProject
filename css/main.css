@@ -19,6 +19,12 @@
     padding: 20px;
 }
 
+/* Login Font */
+.navbar-default .navbar-nav>li>a {
+  color: #000000;
+}
+
+
 
 /*Font Family*/
 h1, h2, h3 {
