@@ -91,6 +91,26 @@ span.text-info{
   	box-shadow:         1px 1px 1px 1px #000000;
 
 }
+
+.btn-default {
+  background-color: #9e0023;
+  border-color: #9e0023;
+  color: #e6e6e6;
+  -moz-box-shadow:    1px 1px 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px 1px 1px #000000;
+  box-shadow:         1px 1px 1px 1px #000000;
+}
+
+.btn-default:hover {
+  background-color: #af1321;
+  border-color: #af1321;
+  color: #e6e6e6;
+  -moz-box-shadow:    1px 1px 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px 1px 1px #000000;
+  box-shadow:         1px 1px 1px 1px #000000;
+
+}
+
 .btn-danger {
     background-color: #9e0023;
     border-color: #9e0023;

@@ -30,30 +30,31 @@
 
       <div class="col-md-3">
         <div class="form-group" ng-class="{ 'has-error' : userForm.airline.$invalid && !userForm.airline.$pristine }"> 
-          <input name="airline" type="text" ng-model="myAirline" placeholder="Airline Carrier" typeahead="airline as airline.name for airline in airlines | filter:{name:$viewValue}" typeahead-loading="loadingLocations" class="form-control"required >
+          <input popover="Your Airline Carrier is required." popover-trigger="mouseenter" name="airline" type="text" ng-model="myAirline" placeholder="Airline Carrier" typeahead="airline as airline.name for airline in airlines | filter:{name:$viewValue}" typeahead-loading="loadingLocations" class="form-control"required >
           <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
           <p ng-show="userForm.airline.$invalid && !userForm.airline.$pristine" class="alert alert-danger">Your Airline Carrier is required.</p>
         </div><!-- ENDS .form-group -->
       </div>
 
+
       <div class="col-md-3">
         <p class="input-group extra">
               <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" required>
               <span class="input-group-btn">
-                <button type="button" class="btn btn-primary" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                <a type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></a>
               </span>
             </p>
       </div>
 
       <div class="col-md-3">
         <div class="form-group" ng-class="{ 'has-error' : userForm.flight.$invalid && !userForm.flight.$pristine }"> 
-          <input type="text" name="flight" placeholder="Flight number" class="form-control" title="flight number" ng-model="myFlight" required>
+          <input popover="Your Flight Number is required." popover-trigger="mouseenter" type="text" name="flight" placeholder="Flight number" class="form-control" title="flight number" ng-model="myFlight" required>
           <p ng-show="userForm.flight.$invalid && !userForm.flight.$pristine" class="alert alert-danger">Your Flight Number is required.</p>
         </div>
       </div>
 
       <div class="col-md-3">
-        <button type="submit" class="btn btn-primary" ng-click="printAir()">Search</button>
+        <a type="submit" class="btn btn-primary" ng-click="printAir()">Search</a>
 
       </div>
 

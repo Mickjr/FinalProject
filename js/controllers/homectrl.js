@@ -6,6 +6,9 @@ demo.controller('HomeCtrl',[
 	"$location",
 	function ($scope, $firebase, $http, $rootScope, $location){
 		
+		$scope.dynamicPopover = 'Hello, World!';
+        $scope.dynamicPopoverTitle = 'Title';
+
 		$scope.myInterval = 5000;
 		$scope.slides = [{image: './img/1.jpg', text: 'Welcome to AirChat!'},
 						{image: './img/2.jpg', text: 'Welcome to AirChat!'},

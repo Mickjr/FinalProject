@@ -21,8 +21,8 @@
             <section class="col-sm-6">
 
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Current Time:
@@ -104,8 +104,8 @@
             <section class="col-sm-6">
                 
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">More Flight Info.
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">More Flight Info.
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg"><h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
@@ -137,8 +137,8 @@
         <section class="col-sm-6">
 
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
@@ -152,8 +152,8 @@
      
 
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
@@ -168,8 +168,8 @@
 
        <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
@@ -229,8 +229,8 @@
                                         <!-- Tabs -->    
 
             <div ng-controller="DetailCtrl">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
-                </button>
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                </a>
                 <hr>
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
