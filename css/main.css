@@ -93,8 +93,8 @@ span.text-info{
 }
 
 .btn-default {
-  background-color: #9e0023;
-  border-color: #9e0023;
+  background-color: #7c7c7c;
+  border-color: #7c7c7c;
   color: #e6e6e6;
   -moz-box-shadow:    1px 1px 1px 1px #000000;
   -webkit-box-shadow: 1px 1px 1px 1px #000000;
@@ -102,8 +102,8 @@ span.text-info{
 }
 
 .btn-default:hover {
-  background-color: #af1321;
-  border-color: #af1321;
+  background-color: #8b8b8b;
+  border-color: #8b8b8b;
   color: #e6e6e6;
   -moz-box-shadow:    1px 1px 1px 1px #000000;
   -webkit-box-shadow: 1px 1px 1px 1px #000000;
