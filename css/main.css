@@ -7,6 +7,8 @@ header {
 }
 
 footer {
+  
+/*  margin-top: 100px;*/
   background-color: #ece9e4;
 }
 
@@ -42,7 +44,7 @@ a {
 /* Buttons */
 .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active {
     background-color: #828282;
-	border: solid 1px #828282;
+	  border: solid 1px #828282;
     color: #e6e6e6;
 }
 .open>.dropdown-toggle.btn-info{

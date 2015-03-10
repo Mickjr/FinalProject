@@ -27,7 +27,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
                 </a>
-                <hr>
+              <!--   <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Current Time:
                 <br>
@@ -110,7 +110,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">More Flight Info.
                 </a>
-                <hr>
+              <!--   <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg"><h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
                     <ul>
@@ -143,7 +143,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
                 </a>
-                <hr>
+              <!--   <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
@@ -158,7 +158,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
                 </a>
-                <hr>
+               <!--  <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
@@ -174,7 +174,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
                 </a>
-                <hr>
+            <!--     <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
                 <br>
@@ -235,7 +235,7 @@
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
                 </a>
-                <hr>
+               <!--  <hr> -->
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
