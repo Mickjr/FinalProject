@@ -23,21 +23,6 @@
             <br>
 
             <section class="col-sm-6">
-            <div ng-controller="DetailCtrl">
-            <h3>Event Data</h3>
-            <div ng-repeat="event in eventbrite.events">
-                <div>
-                    <img ng-src="{{event.event.logo}}" alt=""/>
-                    <h4>{{event.event.title}}</h4>
-                    <p ng-bind-html="event.event.description"></p>
-                    <!-- <pre> {{event | json }}</pre> -->
-                </div>
-            </div>
-    
-
-            </section> <!-- ENDS .row --> 
-
-            <section class="col-sm-6">
 
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
@@ -332,19 +317,23 @@
               <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
             </div>
         </section>
-        <!-- <section>
-            <h3>Event Data</h3>
+
+            <section class="col-sm-6">
+            <div ng-controller="DetailCtrl">
+            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Upcoming Events in {City}</a>
+            <div collapse="isCollapsed">
             <div ng-repeat="event in eventbrite.events">
-                <div>
-                    <img ng-src="{{event.event.logo}}" alt=""/>
-                    <h4>{{event.event.title}}</h4>
-                    <p ng-bind-html="event.event.description"></p> -->
-                    <!-- <pre> {{event | json }}</pre> -->
-                <!-- </div>
+                    <div>
+                        <img ng-src="{{event.event.logo}}" alt=""/>
+                        <h4>{{event.event.title}}</h4>
+                        <p ng-bind-html="event.event.description"></p>
+                        <!-- <pre> {{event | json }}</pre> -->
+                    </div>
+                </div>
             </div>
     
 
-</section>  --><!-- ENDS .row --> 
+            </section> <!-- ENDS .row --> 
 </div>
 </div>
 
