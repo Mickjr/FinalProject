@@ -58,7 +58,7 @@
                 <br>
                 <blockquote>{{ dude.appendix.airports[0].name }}
                 <br>
-                {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
                 <br>
                 {{ dude.appendix.airports[0].postalCode }}
                 <br>
@@ -70,7 +70,7 @@
                 <br>
                 <blockquote>{{ dude.appendix.airports[1].name }}
                 <br>
-                {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
                 <br>
                 {{ dude.appendix.airports[1].postalCode }}
                 <br>
@@ -141,7 +141,7 @@
         <section class="col-sm-6">
 
             <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
                 </a>
               <!--   <hr> -->
                 <div collapse="isCollapsed">
@@ -156,7 +156,7 @@
      
 
             <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
                 </a>
                <!--  <hr> -->
                 <div collapse="isCollapsed">
@@ -172,7 +172,7 @@
 
        <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }} {{ dude.appendix.airports[0].stateCode }}
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
                 </a>
             <!--     <hr> -->
                 <div collapse="isCollapsed">
@@ -233,7 +233,7 @@
                                         <!-- Tabs -->    
 
             <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }} {{ dude.appendix.airports[1].stateCode }}
+                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
                 </a>
                <!--  <hr> -->
                 <div collapse="isCollapsed">
@@ -297,8 +297,9 @@
   
       <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
-            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!</a>
+            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">AirChat Room!</a>
             <div collapse="isCollapsed">
+            <h3>Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!</h3>
             <div ng-repeat="comment in comments">
                   <p> {{comment.user}}</p>
                   <p> {{comment.content}}</p>
@@ -322,7 +323,7 @@
 
         <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
-            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Upcoming Events in {City}</a>
+            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Upcoming Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}</a>
             <div collapse="isCollapsed">
             <div ng-repeat="event in eventbrite.events">
                     <div>
