@@ -34,12 +34,17 @@ a {
   font-family: 'Cuprum', sans-serif;
   color: #000000;
   text-decoration: none;
+
 }
 
 .btn {
   font-family: 'Cuprum', sans-serif;
 }
 
+/* Form */
+.form-control {
+  height: 50px;
+}
 
 /* Buttons */
 .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active {
