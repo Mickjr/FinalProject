@@ -87,7 +87,7 @@ demo.controller('DetailCtrl', [
 
 			console.log('FLIGHT INFO: ', $rootScope.dude.appendix.airports[1]);
 
-			var eventURL = "eventbrite.php?"+"cityId="+$rootScope.dude.appendix.airports[1].city+"&latitudeId="+$rootScope.dude.appendix.airports[1].latitude+"&longitudeId="+$rootScope.dude.appendix.airports[1].longitude;
+			var eventURL = "eventbrite.php?"+"cityId="+$rootScope.dude.appendix.airports[1].city+"regionId="+$rootScope.dude.appendix.airports[1].regionName+"&latitudeId="+$rootScope.dude.appendix.airports[1].latitude+"&longitudeId="+$rootScope.dude.appendix.airports[1].longitude;
 
 		    $http.get(eventURL)
 			.then(function(response){
