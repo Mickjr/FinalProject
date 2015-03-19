@@ -1,14 +1,18 @@
 demo.controller('DetailCtrl', [
 	"$scope",
+	"$modal",
 	"$log",
 	"$rootScope",
 	"$firebase",
 	"$firebaseAuth",
 	"$routeParams",
 	"$http",
-	function ($scope, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http){
+	"modalInstance", 
+	"items",
+	
+	function ($scope, $modal, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $modalInstance, items){
 
-		
+		  $scope.items = ['item1', 'item2', 'item3'];
 
           $scope.dynamicPopover = 'Hello, World!';
           $scope.dynamicPopoverTitle = 'Title';
@@ -68,7 +72,7 @@ demo.controller('DetailCtrl', [
 		var url = "airline.php?"+"airlineId="+$routeParams.airline+"&flightId="+$routeParams.flight+"&yearId="+$routeParams.year+"&monthId="+$routeParams.month+"&dayId="+$routeParams.day;
 
 		$http.get(url).
-		  success(function(data, status, headers, config) {
+		    success(function(data, status, headers, config) {
 		    // console.log("our data: ", data);
 		    // console.log("status: ", status);
 		    $rootScope.dude = data;
