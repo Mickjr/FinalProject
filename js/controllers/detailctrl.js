@@ -12,39 +12,58 @@ demo.controller('DetailCtrl', [
 	
 	function ($scope, $modal, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $modalInstance, items){
 
-		  $scope.items = ['item1', 'item2', 'item3'];
+		$scope.items = ['item1', 'item2', 'item3'];
 
-          $scope.dynamicPopover = 'Hello, World!';
-          $scope.dynamicPopoverTitle = 'Title';
+        $scope.dynamicPopover = 'Hello, World!';
+        $scope.dynamicPopoverTitle = 'Title';
 
-		  $scope.mytime = new Date();
+		$scope.mytime = new Date();
 
-		  $scope.hstep = 1;
-		  $scope.mstep = 15;
+		$scope.hstep = 1;
+		$scope.mstep = 15;
 
-		  $scope.options = {
+		$scope.options = {
 		    hstep: [1, 2, 3],
 		    mstep: [1, 5, 10, 15, 25, 30]
 		  	};
 
-		  $scope.ismeridian = true;
+		$scope.ismeridian = true;
 
-		  $scope.toggleMode = function() {
+		$scope.open = function (size) {
+ 		     var modalInstance = $modal.open({
+		      templateUrl: 'myModalContent.html',
+		      controller: 'ModalInstanceCtrl',
+		      size: size,
+		      resolve: {
+		        items: function () {
+		          return $scope.items;
+		        }
+		      }
+		    });
+
+		    modalInstance.result.then(function (selectedItem) {
+		      $scope.selected = selectedItem;
+		    }, function () {
+		      $log.info('Modal dismissed at: ' + new Date());
+		    });
+		  };
+
+		$scope.toggleMode = function() {
 		    $scope.ismeridian = ! $scope.ismeridian;
 		  	};
 
-		  $scope.update = function() {
+		$scope.update = function() {
 		    var d = new Date();
 		    d.setHours( 14 );
 		    d.setMinutes( 0 );
 		    $scope.mytime = d;
 		  	};
 
-		  $scope.changed = function () {
+		$scope.changed = function () {
 		    $log.log('Time changed to: ' + $scope.mytime);
 		  	}; 	
 
-		  $scope.changed = function () {
+		$scope.changed = function () {
     		$log.log('Time changed to: ' + $scope.mytime);
   			};
 
