@@ -12,6 +12,11 @@ demo.controller('DetailCtrl', [
 	
 	function ($scope, $modal, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $modalInstance, items){
 
+		$scope.items = items;
+  		$scope.selected = {
+    	  item: $scope.items[0]
+  		};
+
 		$scope.items = ['item1', 'item2', 'item3'];
 
         $scope.dynamicPopover = 'Hello, World!';
@@ -28,6 +33,14 @@ demo.controller('DetailCtrl', [
 		  	};
 
 		$scope.ismeridian = true;
+
+		$scope.ok = function () {
+        $modalInstance.close($scope.selected.item);
+        };
+
+        $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+        };
 
 		$scope.open = function (size) {
  		     var modalInstance = $modal.open({
