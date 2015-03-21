@@ -66,7 +66,7 @@
                 </blockquote>
                 </div>
 
-                <div class="well well-lg">Arriving Airport(s):
+                <div class="well well-lg">Arriving Airport:
                 <br>
                 <blockquote>{{ dude.appendix.airports[1].name }}
                 <br>
@@ -77,12 +77,12 @@
                 {{ dude.appendix.airports[1].countryName }}
                 </blockquote>
 
-                <blockquote>{{ dude.appendix.airports[2].name }}
+                <!-- <blockquote>{{ dude.appendix.airports[2].name }}
                 <br>
                 {{ dude.appendix.airports[2].city }}, {{ dude.appendix.airports[2].stateCode }}
                 <br>
                 {{ dude.appendix.airports[2].countryName }}
-                </blockquote>
+                </blockquote> -->
                 </div>
 
                 <div class="well well-lg">Flight Number:
@@ -215,15 +215,17 @@
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[3].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
+                <br>
                 Description: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
                 <br></blockquote>
                 </div>
 
                 <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[4].day }} {{ weatherDepart.query.results.channel.item.forecast[4].date}}
                 <br>
-                <blockquote>High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[4].code }}.gif">
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[4].low }} {{ weatherDepart.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ rootScope.mySearchpart.query.results.channel.item.forecast[4].text }}
                 <br></blockquote>
@@ -242,9 +244,10 @@
                 <div collapse="isCollapsed">
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
-                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[0].code }}.gif">
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[0].low }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
                 <br></blockquote>
@@ -252,9 +255,10 @@
                 
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[1].day }} {{ weatherArrive.query.results.channel.item.forecast[1].date}}
                 <br>
-                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[1].code }}.gif">
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[1].low }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
                 <br></blockquote>
@@ -262,9 +266,10 @@
 
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[2].day }} {{ weatherArrive.query.results.channel.item.forecast[2].date}}
                 <br>
-                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[2].code }}.gif">
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[2].low }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
                 <br></blockquote>
@@ -272,9 +277,10 @@
 
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[3].day }} {{ weatherArrive.query.results.channel.item.forecast[3].date}}
                 <br>
-                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[3].code }}.gif">
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[3].low }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
                 <br></blockquote>
@@ -282,9 +288,10 @@
 
                 <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[4].day }} {{ weatherArrive.query.results.channel.item.forecast[4].date}}
                 <br>
-                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <blockquote>High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }} <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[4].code }}.gif">
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[4].low }} {{ weatherArrive.query.results.channel.units.temperature }}
+                <br>
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
                 <br></blockquote>
