@@ -6,10 +6,16 @@ demo.controller('DetailCtrl', [
 	"$firebaseAuth",
 	"$routeParams",
 	"$http",
-	function ($scope, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http){
+	"$log",
+	"$modal",
+	function ($scope, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $log, $modal){
 
 		
+	      $scope.items = ['item1', 'item2', 'item3'];
+		// $scope.oneAtATime = true;
+		//   console.log("true? ", $scope.oneAtATime);
 
+		  	
           $scope.dynamicPopover = 'Hello, World!';
           $scope.dynamicPopoverTitle = 'Title';
 
@@ -24,6 +30,26 @@ demo.controller('DetailCtrl', [
 		  	};
 
 		  $scope.ismeridian = true;
+
+		  $scope.open = function (size) {
+
+				var modalInstance = $modal.open({
+				  templateUrl: 'views/eventmodal.html',
+				  controller: 'ModalInstanceCtrl',
+				  size: size,
+				  resolve: {
+				    items: function () {
+				      return $scope.items;
+				    }
+				  }
+				});
+
+				modalInstance.result.then(function (selectedItem) {
+				  $scope.selected = selectedItem;
+				}, function () {
+				  $log.info('Modal dismissed at: ' + new Date());
+				});
+		  	};
 
 		  $scope.toggleMode = function() {
 		    $scope.ismeridian = ! $scope.ismeridian;
