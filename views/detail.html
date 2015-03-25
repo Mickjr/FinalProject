@@ -22,7 +22,7 @@
        
             <br>
 
-            <section class="col-sm-6">
+            <section class="col-md-4">
 
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
@@ -105,7 +105,7 @@
             </div>
         </section>
 
-            <section class="col-sm-6">
+            <section class="col-md-4">
                 
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">More Flight Info.
@@ -138,7 +138,7 @@
       </section>
 
 
-        <section class="col-sm-6">
+        <section class="col-md-4">
 
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
@@ -153,8 +153,9 @@
                 </div>
                 </div>
             </div>
+          </section>
      
-
+            <section class="col-md-4">
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
                 </a>
@@ -170,7 +171,7 @@
             </div>
             </section>
 
-       <section class="col-sm-6">
+       <section class="col-md-4">
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
                 </a>
@@ -232,11 +233,11 @@
                 </div>
                 </div>
             </div>
-     
+        </section>
 
 
                                         <!-- Tabs -->    
-
+            <section class="col-md-4">
             <div ng-controller="DetailCtrl">
                 <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
                 </a>
@@ -302,7 +303,7 @@
 
                                            <!-- Tabs -->  
 
-      <section class="col-sm-6">
+      <section class="col-md-12">
             <div ng-controller="DetailCtrl">
             <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">AirChat Room!</a>
             <div collapse="isCollapsed">
@@ -328,7 +329,42 @@
             </div>
         </section>
 
-        <section class="col-sm-6">
+        
+        <section class="col-md-6">
+         
+        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
+
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+        </section>
+
+
+        <section class="col-md-6">
+         
+        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
+
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+        </section>
+
+
+        <section class="col-md-6">
+
+        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
+
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+        </section>
+
+        <section class="col-md-6">
+
+        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
+
+        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+        </section>
+
+        <!-- <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
             <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}</a>
             <div collapse="isCollapsed">
@@ -341,14 +377,14 @@
                         <p ng-bind-html="event.event.description"></p>
                         <h3>Discription</h3>
                         <p ng-bind-html="event.event.description"></p>
-                        <h3>Discription</h3>
+                        <h3>Discription</h3> -->
                         <!-- <pre> {{event | json }}</pre> -->
-                    </div>
+                   <!--  </div>
                 </div>
             </div>
     
 
-            </section> <!-- ENDS .row --> 
+            </section> --> <!-- ENDS .row --> 
 </div>
 </div>
 

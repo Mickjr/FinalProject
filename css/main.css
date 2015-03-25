@@ -5,6 +5,11 @@
 /*img{
   width: 100%;
 }*/
+.form-group {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
 header {
   background-color: #ece9e4;
 }
