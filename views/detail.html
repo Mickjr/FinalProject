@@ -64,9 +64,9 @@
                 {{ dude.appendix.airports[0].countryName }}
                 </blockquote>
    
-             
 
-                Arriving Airport(s):
+
+                Arriving Airport:
                 <br>
                 <blockquote>{{ dude.appendix.airports[1].name }}
                 <br>
@@ -77,13 +77,6 @@
                 {{ dude.appendix.airports[1].countryName }}
                 </blockquote>
 
-                <blockquote>{{ dude.appendix.airports[2].name }}
-                <br>
-                {{ dude.appendix.airports[2].city }}, {{ dude.appendix.airports[2].stateCode }}
-                <br>
-                {{ dude.appendix.airports[2].countryName }}
-                </blockquote>
-                
 
                 Flight Number:
                 <br>
@@ -309,8 +302,8 @@
       
    <!--  <accordion close-others="oneAtATime" > -->
             <accordion-group heading="AirChat Room!" >
-                <!-- Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room! -->
-                <!-- <div ng-repeat="comment in comments">
+                Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!
+                <div ng-repeat="comment in comments">
                       <p> {{comment.user}}</p>
                       <p> {{comment.content}}</p>
                       <button type="submit" class="btn btn-secondary btn-md" ng-if="currentUser.facebook.cachedUserProfile.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! {{comment.$id}}</button>
@@ -321,23 +314,24 @@
                         <div class="form-group">
                               <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
                               </textarea>
-                              <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Comment!</button>
+                              <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Add Comment!</button>
                         </div>
                   </form>
                 </div>
                 <div ng-hide="currentUser.facebook"> 
                   <p>to chat login in with Facebook</p>
                   <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
-                </div> -->
+                </div>
             </accordion-group>
  
    
    
 
-        <!-- <section class="col-sm-6">
-            <div ng-controller="DetailCtrl">
-            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}</a>
-            <div collapse="isCollapsed">
+        
+
+
+   <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
+            Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
             <div ng-repeat="event in eventbrite.events">
                     <div>
                         <h3>Logo</h3>
@@ -347,17 +341,22 @@
                         <p ng-bind-html="event.event.description"></p>
                         <h3>Discription</h3>
                         <p ng-bind-html="event.event.description"></p>
-                        <h3>Discription</h3> -->
+                        <h3>Discription</h3>
                         <!-- <pre> {{event | json }}</pre> -->
-                    <!-- </div>
+                    </div>
                 </div>
             </div>
     
 
-            </section> --> <!-- ENDS .row --> 
+            </section> <!-- ENDS .row --> 
 
 
-   <accordion-group heading="Events For arrival city" >
+
+
+
+
+
+    <!-- <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
@@ -365,9 +364,10 @@
 
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
-    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div> -->
+  
 
-    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
   </accordion-group>
 </accordion>
    
