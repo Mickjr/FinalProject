@@ -5,6 +5,14 @@
 /*img{
   width: 100%;
 }*/
+.panel-group .panel a{
+  font-family: 'Cuprum', sans-serif;
+  color: #000000;
+  text-decoration: none;
+  
+}
+
+
 .panel-group .panel {
   --webkit-box-shadow: 0 4px 5px 2px #000000;
   -moz-box-shadow: 0 4px 5px 2px #000000;
@@ -62,13 +70,6 @@ body {
 /*Font Family*/
 h1, h2, h3 {
   font-family: 'Cuprum', sans-serif;
-}
-
-a {
-  font-family: 'Cuprum', sans-serif;
-  color: #000000;
-  text-decoration: none;
-
 }
 
 .btn {
