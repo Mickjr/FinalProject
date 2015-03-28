@@ -1,6 +1,5 @@
 demo.controller('DetailCtrl', [
 	"$scope",
-	"$log",
 	"$rootScope",
 	"$firebase",
 	"$firebaseAuth",
@@ -8,30 +7,13 @@ demo.controller('DetailCtrl', [
 	"$http",
 	"$log",
 	"$modal",
-	function ($scope, $log, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $log, $modal){
+	function ($scope, $rootScope, $firebase, $firebaseAuth, $routeParams, $http, $log, $modal){
 
-		
-	      $scope.items = ['item1', 'item2', 'item3'];
-		// $scope.oneAtATime = true;
-		//   console.log("true? ", $scope.oneAtATime);
+		  $scope.items = ['item1', 'item2', 'item3'];
+		  $scope.oneAtATime = true;
+		  console.log("true? ", $scope.oneAtATime);
 
-		  	
-          $scope.dynamicPopover = 'Hello, World!';
-          $scope.dynamicPopoverTitle = 'Title';
-
-		  $scope.mytime = new Date();
-
-		  $scope.hstep = 1;
-		  $scope.mstep = 15;
-
-		  $scope.options = {
-		    hstep: [1, 2, 3],
-		    mstep: [1, 5, 10, 15, 25, 30]
-		  	};
-
-		  $scope.ismeridian = true;
-
-		  $scope.open = function (size) {
+		  	$scope.open = function (size) {
 
 				var modalInstance = $modal.open({
 				  templateUrl: 'views/eventmodal.html',
@@ -50,6 +32,21 @@ demo.controller('DetailCtrl', [
 				  $log.info('Modal dismissed at: ' + new Date());
 				});
 		  	};
+
+          $scope.dynamicPopover = 'Hello, World!';
+          $scope.dynamicPopoverTitle = 'Title';
+
+		  $scope.mytime = new Date();
+
+		  $scope.hstep = 1;
+		  $scope.mstep = 15;
+
+		  $scope.options = {
+		    hstep: [1, 2, 3],
+		    mstep: [1, 5, 10, 15, 25, 30]
+		  	};
+
+		  $scope.ismeridian = true;
 
 		  $scope.toggleMode = function() {
 		    $scope.ismeridian = ! $scope.ismeridian;
@@ -84,13 +81,13 @@ demo.controller('DetailCtrl', [
 		$rootScope.authObj.$onAuth(function(authData) {
 			if (authData) {
 				$rootScope.currentUser = authData;
-				console.log("!!!!!!!!!!!!!!!!!!!Logged in as: ", $rootScope.currentUser);
+				//console.log("!!!!!!!!!!!!!!!!!!!Logged in as: ", $rootScope.currentUser);
 			} else {
 				console.log("Logged out");
 			}
 		});
 		// $routeParam.flightId;
-		//console.log("NEW ONE");
+		console.log("NEW ONE");
 		var url = "airline.php?"+"airlineId="+$routeParams.airline+"&flightId="+$routeParams.flight+"&yearId="+$routeParams.year+"&monthId="+$routeParams.month+"&dayId="+$routeParams.day;
 
 		$http.get(url).
@@ -111,15 +108,14 @@ demo.controller('DetailCtrl', [
 		    	//console.log(response)
 		    });
 
-			console.log('FLIGHT INFO: ', $rootScope.dude.appendix.airports[1]);
+			//console.log('FLIGHT INFO: ', $rootScope.dude.appendix.airports[1]);
 
 			var eventURL = "eventbrite.php?"+"cityId="+$rootScope.dude.appendix.airports[1].city+"regionId="+$rootScope.dude.appendix.airports[1].regionName+"&latitudeId="+$rootScope.dude.appendix.airports[1].latitude+"&longitudeId="+$rootScope.dude.appendix.airports[1].longitude;
 
 		    $http.get(eventURL)
 			.then(function(response){
 		    	$scope.eventbrite = response.data
-		    	console.log("!!!!!!!!EVENTS!!!!!!!!!!!!", $scope.eventbrite);
-		    	
+		    	//console.log("!!!!!!!!EVENTS!!!!!!!!!!!!", $scope.eventbrite);
 		    });
 
 
@@ -157,3 +153,4 @@ demo.controller('DetailCtrl', [
 		}
 	} 
 ]);
+

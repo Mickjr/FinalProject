@@ -22,39 +22,38 @@
        
             <br>
 
-            <section class="col-md-4">
+            <section class="col-sm-6">
 
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Flight Information
-                </a>
-              <!--   <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg">Current Time:
+            
+            <accordion close-others="oneAtATime" >
+                <accordion-group heading="Flight Information">
+              
+                Current Time:
                 <br>
                 <blockquote popover="Refresh for Current Time" popover-trigger="mouseenter" >{{mytime | date:'shortTime' }}</blockquote>
-                </div>
-                <div class="well well-lg">Airport Resources:
+                
+                Airport Resources:
                 <br>
                 <blockquote>Departure Terminal: {{ dude.flightStatuses[0].airportResources.departureTerminal }}
                 <br>
                 Departure Gate: {{ dude.flightStatuses[0].airportResources.departureGate }}</blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Coordinates:
+                Coordinates:
                 <br>
                 <blockquote>latitude: {{ dude.appendix.airports[0].latitude}}
                 <br>
                 longitude: {{ dude.appendix.airports[0].longitude}}</blockquote>
-                </div>
+               
 
-                <div class="well well-lg">Phone Number:
+                Phone Number:
                 <br>
                 <blockquote>{{ dude.appendix.airlines[0].name }}
                 <br>
                 {{ dude.appendix.airlines[0].phoneNumber }}</blockquote>
-                </div>
+              
 
-                <div class="well well-lg">Departing Airport:
+                Departing Airport:
                 <br>
                 <blockquote>{{ dude.appendix.airports[0].name }}
                 <br>
@@ -64,9 +63,9 @@
                 <br>
                 {{ dude.appendix.airports[0].countryName }}
                 </blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Arriving Airport:
+                Arriving Airport(s):
                 <br>
                 <blockquote>{{ dude.appendix.airports[1].name }}
                 <br>
@@ -77,42 +76,36 @@
                 {{ dude.appendix.airports[1].countryName }}
                 </blockquote>
 
-                <!-- <blockquote>{{ dude.appendix.airports[2].name }}
+                <blockquote>{{ dude.appendix.airports[2].name }}
                 <br>
                 {{ dude.appendix.airports[2].city }}, {{ dude.appendix.airports[2].stateCode }}
                 <br>
                 {{ dude.appendix.airports[2].countryName }}
-                </blockquote> -->
-                </div>
+                </blockquote>
+                
 
-                <div class="well well-lg">Flight Number:
+                Flight Number:
                 <br>
                 <blockquote>{{ dude.flightStatuses[0].flightNumber }}</blockquote>
-                </div>
+               
 
-                <div class="well well-lg">Airline Carrier:
+                Airline Carrier:
                 <br>
                 <blockquote>{{ dude.appendix.airlines[0].name }}</blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Flight Status:
+                Flight Status:
                 <br>
                 <blockquote>{{ dude.flightStatuses[0].status }}</blockquote>
-                </div>
+            </accordion-group>
+           
 
-              </div>
-
-            </div>
-        </section>
-
-            <section class="col-md-4">
+          
+      
                 
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">More Flight Info.
-                </a>
+            <accordion-group heading="More Flight Info.">
               <!--   <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg"><h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
+                <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
                     <ul>
                       <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
 
@@ -130,265 +123,215 @@
 
                       <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
                     </ul>
+                </accordion-group>
+            
 
-              </div>
-
-            </div>
-
-      </section>
-
-
-        <section class="col-md-4">
-
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
-                </a>
+ 
+                <accordion-group heading="Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
               <!--   <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg">Date:  {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}} 
+                Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.condition.code}}.gif">
                 <br>
-                Temp:  {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}  
+                Temp: {{ weatherDepart.query.results.channel.item.condition.temp}} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
-                Description:  {{ weatherDepart.query.results.channel.item.condition.text }}</blockquote>
-                </div>
-                </div>
-            </div>
-          </section>
-     
-            <section class="col-md-4">
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Current temperature for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
-                </a>
+                Description: {{ weatherDepart.query.results.channel.item.condition.text }}</blockquote>
+
+                 </accordion-group>
+              
+             
+
+
+       
+
+                <accordion-group heading="Current temperature for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}">
+               
                <!--  <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg">Date:  {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}} 
+                Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[0].code}}.gif">
                 <br>
-                Temp:  {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }} 
+                Temp: {{ weatherArrive.query.results.channel.item.condition.temp}} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
-                Description:  {{ weatherArrive.query.results.channel.item.condition.text }}</blockquote>
-                </div>
-                </div>
-            </div>
-            </section>
+                Description: {{ weatherArrive.query.results.channel.item.condition.text }}</blockquote>
+           </accordion-group>
+         </accordion>
+    </section>
 
-       <section class="col-md-4">
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}
-                </a>
+
+
+       <section class="col-sm-6">
+
+             <accordion close-others="oneAtATime" >
+                <accordion-group heading="5-Day forecast for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
+                
             <!--     <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg">Date:  {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
+                Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[0].code }}.gif">
                 <br>
-                High:  {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}  
+                High: {{ weatherDepart.query.results.channel.item.forecast[0].high }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
-                Low:  {{ weatherDepart.query.results.channel.item.forecast[0].low }} {{ weatherDepart.query.results.channel.units.temperature }} 
+                Low: {{ weatherDepart.query.results.channel.item.forecast[0].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
-                Description:  {{ weatherDepart.query.results.channel.item.forecast[0].text }}
+                Description: {{ weatherDepart.query.results.channel.item.forecast[0].text }}
                 <br></blockquote>
-                </div> 
-                
-                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[1].day }} {{ weatherDepart.query.results.channel.item.forecast[1].date}}
+               
+                Date: {{ weatherDepart.query.results.channel.item.forecast[1].day }} {{ weatherDepart.query.results.channel.item.forecast[1].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[1].code }}.gif">
                 <br>
-                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }} 
+                High: {{ weatherDepart.query.results.channel.item.forecast[1].high }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[1].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherDepart.query.results.channel.item.forecast[1].text }}
                 <br></blockquote>
-                </div> 
-
-                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[2].day }} {{ weatherDepart.query.results.channel.item.forecast[2].date}}
+                
+                Date: {{ weatherDepart.query.results.channel.item.forecast[2].day }} {{ weatherDepart.query.results.channel.item.forecast[2].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[2].code }}.gif">
                 <br>
-                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }} 
+                High: {{ weatherDepart.query.results.channel.item.forecast[2].high }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[2].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherDepart.query.results.channel.item.forecast[2].text }}
                 <br></blockquote>
-                </div>
+               
 
-                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[3].day }} {{ weatherDepart.query.results.channel.item.forecast[3].date}}
+                Date: {{ weatherDepart.query.results.channel.item.forecast[3].day }} {{ weatherDepart.query.results.channel.item.forecast[3].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[3].code }}.gif">
                 <br>
-                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }} 
+                High: {{ weatherDepart.query.results.channel.item.forecast[3].high }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[3].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherDepart.query.results.channel.item.forecast[3].text }}
                 <br></blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Date: {{ weatherDepart.query.results.channel.item.forecast[4].day }} {{ weatherDepart.query.results.channel.item.forecast[4].date}}
+                Date: {{ weatherDepart.query.results.channel.item.forecast[4].day }} {{ weatherDepart.query.results.channel.item.forecast[4].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherDepart.query.results.channel.item.forecast[4].code }}.gif">
                 <br>
-                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }} 
+                High: {{ weatherDepart.query.results.channel.item.forecast[4].high }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherDepart.query.results.channel.item.forecast[4].low }} {{ weatherDepart.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ rootScope.mySearchpart.query.results.channel.item.forecast[4].text }}
                 <br></blockquote>
-                </div>
-                </div>
-            </div>
-        </section>
+            </accordion-group>   
+    
 
-
-                                        <!-- Tabs -->    
-            <section class="col-md-4">
-            <div ng-controller="DetailCtrl">
-                <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">5-Day forecast for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
-                </a>
+                
+                <!-- <accordion close-others="oneAtATime" > -->
+            <accordion-group heading="5-Day forecast for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}">
+                
                <!--  <hr> -->
-                <div collapse="isCollapsed">
-                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
+                Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[0].code }}.gif">
                 <br>
-                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }} 
+                High: {{ weatherArrive.query.results.channel.item.forecast[0].high }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[0].low }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[0].text }}
                 <br></blockquote>
-                </div> 
+                 
                 
-                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[1].day }} {{ weatherArrive.query.results.channel.item.forecast[1].date}}
+                Date: {{ weatherArrive.query.results.channel.item.forecast[1].day }} {{ weatherArrive.query.results.channel.item.forecast[1].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[1].code }}.gif">
                 <br>
-                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }} 
+                High: {{ weatherArrive.query.results.channel.item.forecast[1].high }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[1].low }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[1].text }}
                 <br></blockquote>
-                </div> 
+               
 
-                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[2].day }} {{ weatherArrive.query.results.channel.item.forecast[2].date}}
+                Date: {{ weatherArrive.query.results.channel.item.forecast[2].day }} {{ weatherArrive.query.results.channel.item.forecast[2].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[2].code }}.gif">
                 <br>
-                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }} 
+                High: {{ weatherArrive.query.results.channel.item.forecast[2].high }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[2].low }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[2].text }}
                 <br></blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[3].day }} {{ weatherArrive.query.results.channel.item.forecast[3].date}}
+                Date: {{ weatherArrive.query.results.channel.item.forecast[3].day }} {{ weatherArrive.query.results.channel.item.forecast[3].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[3].code }}.gif">
                 <br>
-                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }} 
+                High: {{ weatherArrive.query.results.channel.item.forecast[3].high }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[3].low }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[3].text }}
                 <br></blockquote>
-                </div>
+                
 
-                <div class="well well-lg">Date: {{ weatherArrive.query.results.channel.item.forecast[4].day }} {{ weatherArrive.query.results.channel.item.forecast[4].date}}
+                Date: {{ weatherArrive.query.results.channel.item.forecast[4].day }} {{ weatherArrive.query.results.channel.item.forecast[4].date}}
                 <br>
                 <blockquote>
                 <img src="http://l.yimg.com/a/i/us/we/52/{{ weatherArrive.query.results.channel.item.forecast[4].code }}.gif">
                 <br>
-                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }} 
+                High: {{ weatherArrive.query.results.channel.item.forecast[4].high }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Low: {{ weatherArrive.query.results.channel.item.forecast[4].low }} {{ weatherArrive.query.results.channel.units.temperature }}
                 <br>
                 Description: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
                 <br></blockquote>
-                </div>
-            </div>
-
-              </section>
+            </accordion-group>
+           
 
                                            <!-- Tabs -->  
 
-      <section class="col-md-12">
-            <div ng-controller="DetailCtrl">
-            <a class="btn btn-default" ng-click="isCollapsed = !isCollapsed">AirChat Room!</a>
-            <div collapse="isCollapsed">
-            <h3>Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!</h3>
-            <div ng-repeat="comment in comments">
-                  <p> {{comment.user}}</p>
-                  <p> {{comment.content}}</p>
-                  <button type="submit" class="btn btn-secondary btn-md" ng-if="currentUser.facebook.cachedUserProfile.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! {{comment.$id}}</button>
-                  <hr/>
-            </div>
-            <div ng-show="currentUser.facebook"> 
-              <form ng-submit="createComment()">
-                    <div class="form-group">
-                          <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
-                          </textarea>
-                          <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Comment!</button>
-                    </div>
-              </form>
-            </div>
-            <div ng-hide="currentUser.facebook"> 
-              <p>to chat login in with Facebook</p>
-              <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
-            </div>
-        </section>
-
-        
-        <section class="col-md-6">
-         
-        <button class="btn btn-primary" ng-click="open('sm')">Small modal</button>
-
-        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-
-        </section>
-
-
-        <section class="col-md-6">
-         
-        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
-
-        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-
-        </section>
-
-
-        <section class="col-md-6">
-
-        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
-
-        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-
-        </section>
-
-        <section class="col-md-6">
-
-        <a class="btn btn-primary" ng-click="open('sm')">Small modal</a>
-
-        <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-
-        </section>
+      
+   <!--  <accordion close-others="oneAtATime" > -->
+            <accordion-group heading="AirChat Room!" >
+                <!-- Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room! -->
+                <!-- <div ng-repeat="comment in comments">
+                      <p> {{comment.user}}</p>
+                      <p> {{comment.content}}</p>
+                      <button type="submit" class="btn btn-secondary btn-md" ng-if="currentUser.facebook.cachedUserProfile.id===comment.userId" ng-click="deleteComment(comment.$id)"> Delete! {{comment.$id}}</button>
+                      <hr/>
+                </div>
+                <div ng-show="currentUser.facebook"> 
+                  <form ng-submit="createComment()">
+                        <div class="form-group">
+                              <textarea class="form-control" ng-model="newComment.content" placeholder="Enter Comment">
+                              </textarea>
+                              <button type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Comment!</button>
+                        </div>
+                  </form>
+                </div>
+                <div ng-hide="currentUser.facebook"> 
+                  <p>to chat login in with Facebook</p>
+                  <button  type="submit" class="btn btn-primary btn-md" ng-click="authObj.$unauth();">Logout</button>
+                </div> -->
+            </accordion-group>
+ 
+   
+   
 
         <!-- <section class="col-sm-6">
             <div ng-controller="DetailCtrl">
@@ -405,12 +348,27 @@
                         <p ng-bind-html="event.event.description"></p>
                         <h3>Discription</h3> -->
                         <!-- <pre> {{event | json }}</pre> -->
-                   <!--  </div>
+                    <!-- </div>
                 </div>
             </div>
     
 
             </section> --> <!-- ENDS .row --> 
-</div>
-</div>
 
+
+   <accordion-group heading="Events For arrival city" >
+
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+
+    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+  </accordion-group>
+</accordion>
+   
+
+</section>
