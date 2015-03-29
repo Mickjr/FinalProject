@@ -7,7 +7,7 @@
 }*/
 .panel-group .panel a{
   font-family: 'Cuprum', sans-serif;
-  color: #000000;
+  color: #c7c7c7;
   text-decoration: none;
 
 }
@@ -30,8 +30,9 @@
 }
 
 .panel-group .panel-heading {
-  background-color: #f7b55f;
+  background-color: #c51736;
   border: none;
+  
   /*border-color: #f7b55f;
   border-top-color: #f7b55f;
   border-bottom-color: #f7b55f;
