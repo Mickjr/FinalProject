@@ -30,7 +30,13 @@
 }
 
 .panel-group .panel-heading {
-  background-color: #f2ece7;
+  background-color: #f7b55f;
+  border: none;
+  /*border-color: #f7b55f;
+  border-top-color: #f7b55f;
+  border-bottom-color: #f7b55f;
+  border-left-color: #f7b55f;
+  border-right-color: #f7b55f;*/
   -webkit-box-shadow: 0 8px 6px 2px #000000;
   -moz-box-shadow: 0 8px 6px 2px #000000;
   box-shadow: 0 8px 6px 2px #000000;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
