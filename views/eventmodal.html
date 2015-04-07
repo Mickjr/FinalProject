@@ -1,11 +1,26 @@
     <div class="modal-header">
       <button type="button" class="close" ng-click="cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title">Modal title</h4>
+      <h4 class="modal-title">More Flight Info.</h4>
     </div>
     <div class="modal-body">
-      <p>One fine body&hellip;</p>
-      <p>One fine body&hellip;</p>
-      <p>One fine body&hellip;</p>
+      <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
+                    <ul>
+                      <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
+
+                      <li>Active (A) - Active flights represent pushed back from gate and airborne flights. They may have departure information depending upon the availability of the data. An active flight may transition to Unknown, Landed, or Redirected. While active, FlightStats tracks information about departure, estimated arrival, and where available, positional data.</li>
+
+                      <li>Unknown (U) - An unknown flight occurs when FlightStats cannot determine the final status of a flight from a data source in a reasonable amount of time. Note, this is a valid state rather than an error state. For example, ASDI information may not be available for certain flights internationally or the airline may not participate in a subscribed GDS.</li>
+
+                      <li>Redirected (R) - The flight is in the air and has changed its destination to an unscheduled airport. After landing at an unscheduled airport, the state will change to Diverted.</li>
+
+                      <li>Landed (L) - The flight landed at the scheduled airport.</li>
+
+                      <li>Diverted (D) - The flight landed at an unscheduled airport.</li>
+
+                      <li>Cancelled (C) - The flight was cancelled.</li>
+
+                      <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
+                    </ul>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-primary" ng-click="cancel()">Close</button>

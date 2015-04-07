@@ -90,13 +90,15 @@
                 Flight Status:
                 <br>
                 <blockquote>{{ dude.flightStatuses[0].status }}</blockquote>
+
+                <button class="btn btn-default" ng-click="open('sm')">More Flight Info.</button>
+
             </accordion-group>
            
 
             
                 
-            <accordion-group heading="More Flight Info.">
-              <!--   <hr> -->
+            <!-- <accordion-group heading="More Flight Info.">
                 <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
                     <ul>
                       <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
@@ -115,7 +117,7 @@
 
                       <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
                     </ul>
-                </accordion-group>
+                </accordion-group> -->
             
 
  
@@ -299,7 +301,7 @@
 
       
    <!--  <accordion close-others="oneAtATime" > -->
-            <accordion-group heading="AirChat Room!" >
+            <accordion-group heading="Information from Airline Carrier!" >
                 Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!
                 <div ng-repeat="comment in comments">
                       <p> {{comment.user}}</p>
@@ -328,7 +330,7 @@
         
 
 
-   <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
+   <!-- <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
             Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
             <div ng-repeat="event in eventbrite.events">
                     <div>
@@ -339,14 +341,14 @@
                         <p ng-bind-html="event.event.description"></p>
                         <h3>Discription</h3>
                         <p ng-bind-html="event.event.description"></p>
-                        <h3>Discription</h3>
+                        <h3>Discription</h3> -->
                         <!-- <pre> {{event | json }}</pre> -->
-                    </div>
+                    <!-- </div>
                 </div>
             </div>
     
 
-            </section> <!-- ENDS .row --> 
+            </section> --> <!-- ENDS .row --> 
 
 
 
@@ -366,7 +368,7 @@
   
 
 
-  </accordion-group>
+  <!-- </accordion-group> -->
 </accordion>
    
 
