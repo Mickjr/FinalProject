@@ -9,18 +9,19 @@
         </div>
       </slide>
     </carousel>
+    <!-- https://www.youtube.com/watch?v=g0EdSiiyxdI -->
    
-            <!-- <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p> -->
+          <!-- <p>Welcome {{loginObj.user.thirdPartyUserData.name}}</p> -->
           <!-- <pre>{{ weatherDepart.query.results.channel.item.forecast | json}}</pre> --> 
           <!-- <pre>{{ weather2 | json }}</pre> -->
-         <!--  <pre>{{ events | json }}</pre> -->
-            <!-- <pre>{{ weatherDepart.query.results.location.city }}</pre> -->
-         <!-- <pre>{{ loginObj.user.data.url | json }}</pre>  -->
+          <!--  <pre>{{ events | json }}</pre> -->
+          <!-- <pre>{{ weatherDepart.query.results.location.city }}</pre> -->
+          <!-- <pre>{{ loginObj.user.data.url | json }}</pre>  -->
             <div class="container">
             <div class="row">
 
-       
             <br>
+
             <section class="col-sm-6">
 
             
@@ -97,32 +98,7 @@
            
 
             
-                
-            <!-- <accordion-group heading="More Flight Info.">
-                <h5>FlightStats uses a number of status codes to denote the state of the flight. The following states are currently used:</h5>
-                    <ul>
-                      <li>Scheduled (S) - A scheduled flight is one that is anticipated to depart and arrive according to either filed flight plans or published flight schedules. A Scheduled flight can transition to Cancelled, Active, or Unknown.</li>
-
-                      <li>Active (A) - Active flights represent pushed back from gate and airborne flights. They may have departure information depending upon the availability of the data. An active flight may transition to Unknown, Landed, or Redirected. While active, FlightStats tracks information about departure, estimated arrival, and where available, positional data.</li>
-
-                      <li>Unknown (U) - An unknown flight occurs when FlightStats cannot determine the final status of a flight from a data source in a reasonable amount of time. Note, this is a valid state rather than an error state. For example, ASDI information may not be available for certain flights internationally or the airline may not participate in a subscribed GDS.</li>
-
-                      <li>Redirected (R) - The flight is in the air and has changed its destination to an unscheduled airport. After landing at an unscheduled airport, the state will change to Diverted.</li>
-
-                      <li>Landed (L) - The flight landed at the scheduled airport.</li>
-
-                      <li>Diverted (D) - The flight landed at an unscheduled airport.</li>
-
-                      <li>Cancelled (C) - The flight was cancelled.</li>
-
-                      <li>Not Operational (NO) - The flight appears to be from an outdated schedule or flight plan – meaning that when we queried the airline, it returned that the flight is not scheduled.</li>
-                    </ul>
-                </accordion-group> -->
-            
-
- 
                 <accordion-group heading="Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
-              <!--   <hr> -->
                 Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
@@ -135,13 +111,7 @@
                  </accordion-group>
               
              
-
-
-       
-
                 <accordion-group heading="Current temperature for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}">
-               
-               <!--  <hr> -->
                 Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
@@ -160,8 +130,6 @@
 
              <accordion close-others="oneAtATime" >
                 <accordion-group heading="5-Day forecast for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
-                
-            <!--     <hr> -->
                 Date: {{ weatherDepart.query.results.channel.item.forecast[0].day }} {{ weatherDepart.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
@@ -227,10 +195,7 @@
     
 
                 
-                <!-- <accordion close-others="oneAtATime" > -->
             <accordion-group heading="5-Day forecast for {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}">
-                
-               <!--  <hr> -->
                 Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
                 <blockquote>
@@ -295,12 +260,9 @@
                 Description: {{ weatherArrive.query.results.channel.item.forecast[4].text }}
                 <br></blockquote>
             </accordion-group>
-           
 
                                            <!-- Tabs -->  
 
-      
-   <!--  <accordion close-others="oneAtATime" > -->
             <accordion-group heading="Information from Airline Carrier!" >
                 Welcome {{currentUser.facebook.cachedUserProfile.name }}, to the AirChat room!
                 <div ng-repeat="comment in comments">
@@ -324,12 +286,6 @@
                 </div>
             </accordion-group>
  
-   
-   
-
-        
-
-
    <!-- <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
             Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
             <div ng-repeat="event in eventbrite.events">
@@ -350,12 +306,6 @@
 
             </section> --> <!-- ENDS .row --> 
 
-
-
-
-
-
-
     <!-- <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
@@ -365,10 +315,8 @@
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
     <div ng-show="selected">Selection from a modal: {{ selected }}</div> -->
-  
 
-
-  <!-- </accordion-group> -->
+    <!-- </accordion-group> -->
 </accordion>
    
 

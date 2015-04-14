@@ -7,7 +7,7 @@ demo.controller('HomeCtrl',[
 	function ($scope, $firebase, $http, $rootScope, $location){
 		
 		// $scope.dynamicPopover = 'Hello, World!';
-  //       $scope.dynamicPopoverTitle = 'Title';
+  		// $scope.dynamicPopoverTitle = 'Title';
 
 		$scope.myInterval = 5000;
 		$scope.slides = [{image: './img/1.jpg', text: 'Welcome to AirChat!'},
@@ -27,7 +27,7 @@ demo.controller('HomeCtrl',[
 			$location.path('/detail/'+$rootScope.mySearch.year+'/'+$rootScope.mySearch.month+'/'+$rootScope.mySearch.day+'/'+$rootScope.mySearch.airline+'/'+$rootScope.mySearch.flight);
 
 			
-			// console.log($rootScope.mySearch);
+		// console.log($rootScope.mySearch);
 		}
 
 		$http.get('airline.json').then(function(response){
