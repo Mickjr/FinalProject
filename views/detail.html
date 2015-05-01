@@ -90,14 +90,12 @@
 
                 Flight Status:
                 <br>
-                <blockquote>{{ dude.flightStatuses[0].status }}</blockquote><button class="btn btn-default" ng-click="open('lg')">More Flight Info.</button>
+                <blockquote>{{ dude.flightStatuses[0].status }}</blockquote>
 
-                
+                <button class="btn btn-default" ng-click="open()">More Flight Info.</button>     
 
             </accordion-group>
            
-
-            
                 <accordion-group heading="Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
                 Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
@@ -286,7 +284,7 @@
                 </div>
             </accordion-group>
  
-   <!-- <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
+   <accordion-group heading="Events For {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}" >
             Upcoming Social Events in {{ dude.appendix.airports[1].city }}, {{ dude.appendix.airports[1].stateCode }}
             <div ng-repeat="event in eventbrite.events">
                     <div>
@@ -297,14 +295,14 @@
                         <p ng-bind-html="event.event.description"></p>
                         <h3>Discription</h3>
                         <p ng-bind-html="event.event.description"></p>
-                        <h3>Discription</h3> -->
+                        <h3>Discription</h3>
                         <!-- <pre> {{event | json }}</pre> -->
-                    <!-- </div>
+                     </div>
                 </div>
             </div>
     
 
-            </section> --> <!-- ENDS .row --> 
+            </section> <!-- ENDS .row --> 
 
     <!-- <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
@@ -314,7 +312,7 @@
 
     <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
 
-    <div ng-show="selected">Selection from a modal: {{ selected }}</div> -->
+    <div ng-show="selected" --><!-- >Selection from a modal: {{ selected }}</div> -->
 
     <!-- </accordion-group> -->
 </accordion>
