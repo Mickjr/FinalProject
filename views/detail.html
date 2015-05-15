@@ -90,14 +90,12 @@
 
                 Flight Status:
                 <br>
-                <blockquote>{{ dude.flightStatuses[0].status }}</blockquote><button class="btn btn-default" ng-click="open('lg')">More Flight Info.</button>
+                <blockquote>{{ dude.flightStatuses[0].status }}</blockquote>
 
-                
+                <button class="btn btn-default" ng-click="open()">More Flight Info.</button>     
 
             </accordion-group>
            
-
-            
                 <accordion-group heading="Current temperature for {{ dude.appendix.airports[0].city }}, {{ dude.appendix.airports[0].stateCode }}">
                 Date: {{ weatherArrive.query.results.channel.item.forecast[0].day }} {{ weatherArrive.query.results.channel.item.forecast[0].date}}
                 <br>
